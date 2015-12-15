@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1.5
+  description: MyText
+  date: 2015-12-15
+  person_id: 
+  client_id: 
+
+two:
+  amount: 1.5
+  description: MyText
+  date: 2015-12-15
+  person_id: 
+  client_id: 

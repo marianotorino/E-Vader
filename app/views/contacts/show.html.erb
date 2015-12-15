@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @contact.kind %>
+</p>
+
+<p>
+  <strong>Detalle:</strong>
+  <%= @contact.data %>
+</p>
+
+<%= link_to 'Editar', edit_client_contact_path(@client,@contact) %> |
+<%= link_to 'Volver', client_contacts_path(@client) %>

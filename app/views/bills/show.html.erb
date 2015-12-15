@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Monto:</strong>
+  <%= @bill.amount %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @bill.description %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @bill.date %>
+</p>
+
+<p>
+  <strong>Destinatario:</strong>
+  <%= @bill.person.name %>
+</p>
+
+<p>
+  <strong>CUIT/CUIL del destinatario:</strong>
+  <%= @bill.person.cuit %>
+</p>
+
+<%= link_to 'Editar', edit_client_bill_path(@client,@bill) %> |
+<%= link_to 'Volver', client_bills_path(@client) %>

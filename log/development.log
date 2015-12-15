@@ -1,0 +1,975 @@
+  [1m[36m (146.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (141.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreatePeople (20151215184448)
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "cuit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151215184448"]]
+  [1m[35m (148.5ms)[0m  commit transaction
+Migrating to CreateClients (20151215184823)
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "surname" varchar, "dni" integer, "gender" varchar, "birthdate" date, "cuit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151215184823"]]
+  [1m[35m (136.7ms)[0m  commit transaction
+Migrating to CreateBills (20151215185011)
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35m (6.5ms)[0m  CREATE TABLE "bills" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "amount" float, "description" text, "date" date, "person_id" integer, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.5ms)[0m  [1mCREATE  INDEX "index_bills_on_person_id" ON "bills" ("person_id")[0m
+  [1m[35m (2.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bills_on_person_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bills_on_person_id' AND type='index'
+
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_bills_on_client_id" ON "bills" ("client_id")[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151215185011"]]
+  [1m[36m (145.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateContacts (20151215185059)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "contacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "kind" varchar, "data" text, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX "index_contacts_on_client_id" ON "contacts" ("client_id")
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151215185059"]]
+  [1m[35m (158.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bills_on_client_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bills_on_client_id' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bills_on_person_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bills_on_person_id' AND type='index'
+[0m
+  [1m[35m (0.8ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_contacts_on_client_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_contacts_on_client_id' AND type='index'
+
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 15:54:23 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ClientsController#index as HTML
+  [1m[35mClient Load (0.8ms)[0m  SELECT "clients".* FROM "clients"
+  Rendered clients/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 8890ms (Views: 8785.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/bills.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-15 15:54:34 -0300
+
+
+Started GET "/assets/clients.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-15 15:54:34 -0300
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-15 15:54:34 -0300
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-15 15:54:34 -0300
+
+
+Started GET "/assets/scaffolds.self-3a969dd78e1062d361cf98279510766dae0340d7bd86dc03acb05522fd9a6487.css?body=1" for 127.0.0.1 at 2015-12-15 15:54:34 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-15 15:54:34 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-15 15:54:35 -0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-15 15:54:35 -0300
+
+
+Started GET "/assets/bills.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 15:54:35 -0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-15 15:54:35 -0300
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 15:54:35 -0300
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 15:54:35 -0300
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 15:54:35 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-15 15:54:35 -0300
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-12-15 15:54:45 -0300
+Processing by ClientsController#new as HTML
+  Rendered clients/_form.html.erb (277.0ms)
+  Rendered clients/new.html.erb within layouts/application (331.7ms)
+Completed 200 OK in 847ms (Views: 769.1ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2015-12-15 15:55:08 -0300
+Processing by ClientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPxI2XA9oQ8RjcSZWy/YtBEOCCj+6+2lsBSQmVqtsgI75Ya9T02e/W0p+sgmkKPmk+4eShz7Jp4nuHO414cppQ==", "client"=>{"name"=>"", "surname"=>"", "dni"=>"", "gender"=>"", "birthdate(1i)"=>"2015", "birthdate(2i)"=>"12", "birthdate(3i)"=>"15", "cuit"=>""}, "commit"=>"Create Client"}
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "clients" ("name", "surname", "gender", "cuit", "birthdate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", ""], ["surname", ""], ["gender", ""], ["cuit", ""], ["birthdate", "2015-12-15"], ["created_at", "2015-12-15 18:55:09.050480"], ["updated_at", "2015-12-15 18:55:09.050480"]]
+  [1m[36m (144.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 202ms (ActiveRecord: 147.0ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-12-15 15:55:09 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mClient Load (1.2ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered clients/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 525ms (Views: 449.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/clients/1/edit" for 127.0.0.1 at 2015-12-15 15:55:14 -0300
+Processing by ClientsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.9ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered clients/_form.html.erb (81.1ms)
+  Rendered clients/edit.html.erb within layouts/application (92.6ms)
+Completed 200 OK in 553ms (Views: 546.7ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/clients/1" for 127.0.0.1 at 2015-12-15 15:56:05 -0300
+Processing by ClientsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SFZA8OqkU3enlFm2TUc48jSte6atTHjzA78arhY+PXKzT46U1dRshdswZ+cw+EOgtk1txE9cs8iUE/mPmxSm1Q==", "client"=>{"name"=>"Ramiro", "surname"=>"Antonio", "dni"=>"34234432", "gender"=>"M", "birthdate(1i)"=>"2010", "birthdate(2i)"=>"8", "birthdate(3i)"=>"31", "cuit"=>"20-2341414-9"}, "commit"=>"Update Client", "id"=>"1"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  UPDATE "clients" SET "name" = ?, "surname" = ?, "dni" = ?, "gender" = ?, "cuit" = ?, "birthdate" = ?, "updated_at" = ? WHERE "clients"."id" = ?  [["name", "Ramiro"], ["surname", "Antonio"], ["dni", 34234432], ["gender", "M"], ["cuit", "20-2341414-9"], ["birthdate", "2010-08-31"], ["updated_at", "2015-12-15 18:56:05.590297"], ["id", 1]]
+  [1m[36m (145.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 178ms (ActiveRecord: 147.9ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-12-15 15:56:05 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered clients/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 473ms (Views: 461.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-12-15 15:56:10 -0300
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (4.4ms)[0m  [1mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 402ms (Views: 394.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2015-12-15 15:56:17 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered clients/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 403ms (Views: 397.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-12-15 15:56:20 -0300
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (0.8ms)[0m  [1mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 411ms (Views: 407.6ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/clients/1" for 127.0.0.1 at 2015-12-15 15:56:35 -0300
+Processing by ClientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qDPozRHW/y1YDtCTTu+ICxEizHTZ7llBiNDCiExhjENTKiapLqbA3ySq7sIzUPNZk8LaFjv+knoffCGpwUsX5A==", "id"=>"1"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "clients" WHERE "clients"."id" = ?  [["id", 1]]
+  [1m[36m (147.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/clients
+Completed 302 Found in 168ms (ActiveRecord: 148.9ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-12-15 15:56:36 -0300
+Processing by ClientsController#index as HTML
+  [1m[35mClient Load (1.0ms)[0m  SELECT "clients".* FROM "clients"
+  Rendered clients/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 458ms (Views: 454.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-12-15 15:56:45 -0300
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 491ms (Views: 444.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-12-15 15:56:49 -0300
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (22.0ms)
+  Rendered people/new.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 501ms (Views: 455.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-12-15 15:56:57 -0300
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.7ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 395ms (Views: 390.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 16:06:06 -0300
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (3.5ms)[0m  [1mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 409ms (Views: 390.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-12-15 16:06:11 -0300
+Processing by ClientsController#new as HTML
+  Rendered clients/_form.html.erb (35.0ms)
+  Rendered clients/new.html.erb within layouts/application (42.9ms)
+Completed 200 OK in 507ms (Views: 443.8ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2015-12-15 16:06:39 -0300
+Processing by ClientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6/CrY4XXU9HLa/yRKOEsz/iQWeqbG+8MDePq5fACHvAQ6WUHuqdsI7fPwsBVXledenBPiHkLJDeaTwnEfSiFVw==", "client"=>{"name"=>"Ramiro", "surname"=>"lala", "dni"=>"42423424", "gender"=>"M", "birthdate(1i)"=>"2015", "birthdate(2i)"=>"12", "birthdate(3i)"=>"15", "cuit"=>"8234923jedhf"}, "commit"=>"Create Client"}
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "clients" ("name", "surname", "dni", "gender", "cuit", "birthdate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ramiro"], ["surname", "lala"], ["dni", 42423424], ["gender", "M"], ["cuit", "8234923jedhf"], ["birthdate", "2015-12-15"], ["created_at", "2015-12-15 19:06:39.909692"], ["updated_at", "2015-12-15 19:06:39.909692"]]
+  [1m[35m (148.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/clients/2
+Completed 302 Found in 183ms (ActiveRecord: 150.1ms)
+
+
+Started GET "/clients/2" for 127.0.0.1 at 2015-12-15 16:06:40 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mClient Load (1.3ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered clients/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 395ms (Views: 381.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-12-15 16:06:44 -0300
+Processing by ClientsController#index as HTML
+  [1m[35mClient Load (1.0ms)[0m  SELECT "clients".* FROM "clients"
+  Rendered clients/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 443ms (Views: 439.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/clients/2" for 127.0.0.1 at 2015-12-15 16:06:51 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mClient Load (4.6ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered clients/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 411ms (Views: 401.3ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/clients/2/contacts" for 127.0.0.1 at 2015-12-15 16:06:59 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms)
+
+NoMethodError (undefined method `contacts' for #<Client:0xb4e4cd48>):
+  app/controllers/contacts_controller.rb:8:in `index'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (52.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (21.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (216.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (142.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (351.5ms)
+
+
+Started GET "/clients/2/contacts" for 127.0.0.1 at 2015-12-15 16:07:39 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[36mClient Load (1.0ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mContact Load (0.8ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?  [["client_id", 2]]
+  Rendered contacts/index.html.erb within layouts/application (95.8ms)
+Completed 500 Internal Server Error in 385ms (ActiveRecord: 11.7ms)
+
+ActionView::Template::Error (undefined local variable or method `new_contact_path' for #<#<Class:0xb4caa7b0>:0xb4ca8780>):
+    28: 
+    29: <br>
+    30: 
+    31: <%= link_to 'New Contact', new_contact_path %>
+  app/views/contacts/index.html.erb:31:in `_app_views_contacts_index_html_erb__920329180__631054578'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (83.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (24.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (231.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (153.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (284.8ms)
+
+
+Started GET "/clients/2/contacts" for 127.0.0.1 at 2015-12-15 16:11:58 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mContact Load (0.4ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?  [["client_id", 2]]
+  Rendered contacts/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 438ms (Views: 430.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/clients/2/contacts" for 127.0.0.1 at 2015-12-15 16:12:34 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mContact Load (0.5ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?  [["client_id", 2]]
+  Rendered contacts/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 398ms (Views: 390.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/clients/2/contacts" for 127.0.0.1 at 2015-12-15 16:12:39 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?  [["client_id", 2]]
+  Rendered contacts/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 422ms (Views: 412.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/clients/2/contacts/new" for 127.0.0.1 at 2015-12-15 16:12:41 -0300
+Processing by ContactsController#new as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered contacts/_form.html.erb (123.5ms)
+  Rendered contacts/new.html.erb within layouts/application (135.7ms)
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 3.5ms)
+
+ActionView::Template::Error (undefined method `contacts_path' for #<#<Class:0xb4caa7b0>:0xb9b11b38>):
+    1: <%= form_for(@contact) do |f| %>
+    2:   <% if @contact.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+  app/views/contacts/_form.html.erb:1:in `_app_views_contacts__form_html_erb___1016486475__589924928'
+  app/views/contacts/new.html.erb:3:in `_app_views_contacts_new_html_erb___62118427__589818188'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (88.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (28.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (229.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (143.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (299.3ms)
+
+
+Started GET "/clients/2/contacts/new" for 127.0.0.1 at 2015-12-15 16:12:44 -0300
+Processing by ContactsController#new as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[35mClient Load (0.4ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered contacts/_form.html.erb (153.3ms)
+  Rendered contacts/new.html.erb within layouts/application (159.6ms)
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `contacts_path' for #<#<Class:0xb4caa7b0>:0xb8a98018>):
+    1: <%= form_for(@contact) do |f| %>
+    2:   <% if @contact.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+  app/views/contacts/_form.html.erb:1:in `_app_views_contacts__form_html_erb___1016486475__598713338'
+  app/views/contacts/new.html.erb:3:in `_app_views_contacts_new_html_erb___62118427__598455948'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (106.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (32.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (284.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (3.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (168.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (316.2ms)
+
+
+Started GET "/clients/2/contacts/new" for 127.0.0.1 at 2015-12-15 16:14:09 -0300
+Processing by ContactsController#new as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered contacts/_form.html.erb (65.1ms)
+  Rendered contacts/new.html.erb within layouts/application (177.0ms)
+Completed 500 Internal Server Error in 198ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined local variable or method `contacts_path' for #<#<Class:0xb4caa7b0>:0xb38c617c>):
+    2: 
+    3: <%= render 'form' %>
+    4: 
+    5: <%= link_to 'Back', contacts_path %>
+  app/views/contacts/new.html.erb:5:in `_app_views_contacts_new_html_erb___62118427__598455948'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (66.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (28.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (208.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (3.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (149.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (5.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (303.3ms)
+
+
+Started GET "/clients/2/contacts/new" for 127.0.0.1 at 2015-12-15 16:14:58 -0300
+Processing by ContactsController#new as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered contacts/_form.html.erb (18.3ms)
+  Rendered contacts/new.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 488ms (Views: 478.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/clients/2/contacts" for 127.0.0.1 at 2015-12-15 16:17:12 -0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NTGig56/37T+cLXzVvXBim1A9tfRIre+bBD7hSMZYd7OKGznoc/gRoLUi6IrSrrY76DgtTMyfIX7vBikrjP6eQ==", "contact"=>{"kind"=>"Telefono", "data"=>"3434234"}, "commit"=>"Create Contact", "client_id"=>"2"}
+  [1m[36mClient Load (0.8ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "Telefono"], ["data", "3434234"], ["client_id", 2], ["created_at", "2015-12-15 19:17:12.307115"], ["updated_at", "2015-12-15 19:17:12.307115"]]
+  [1m[35m (142.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/clients/2/contacts/1
+Completed 302 Found in 238ms (ActiveRecord: 145.3ms)
+
+
+Started GET "/clients/2/contacts/1" for 127.0.0.1 at 2015-12-15 16:17:12 -0300
+Processing by ContactsController#show as HTML
+  Parameters: {"client_id"=>"2", "id"=>"1"}
+  [1m[36mContact Load (0.9ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered contacts/show.html.erb within layouts/application (138.2ms)
+Completed 500 Internal Server Error in 191ms (ActiveRecord: 1.9ms)
+
+ActionView::Template::Error (undefined method `edit_contact_path' for #<#<Class:0xb4caa7b0>:0xb4f30610>):
+    15:   <%= @contact.client %>
+    16: </p>
+    17: 
+    18: <%= link_to 'Edit', edit_contact_path(@contact) %> |
+    19: <%= link_to 'Back', contacts_path %>
+  app/views/contacts/show.html.erb:18:in `_app_views_contacts_show_html_erb__305731635__629776798'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (108.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (24.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (242.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (132.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (277.3ms)
+
+
+Started GET "/clients/2/contacts/1" for 127.0.0.1 at 2015-12-15 16:18:23 -0300
+Processing by ContactsController#show as HTML
+  Parameters: {"client_id"=>"2", "id"=>"1"}
+  [1m[35mContact Load (0.4ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.7ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered contacts/show.html.erb within layouts/application (38.5ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Qclient):
+    11: </p>
+    12: 
+    13: <%= link_to 'Editar', edit_client_contact_path(@client,@contact) %> |
+    14: <%= link_to 'Volver', client_contacts_path(Qclient) %>
+  app/views/contacts/show.html.erb:14:in `_app_views_contacts_show_html_erb__305731635__632629558'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (71.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (33.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (265.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (126.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (251.9ms)
+
+
+Started GET "/clients/2/contacts/1" for 127.0.0.1 at 2015-12-15 16:18:43 -0300
+Processing by ContactsController#show as HTML
+  Parameters: {"client_id"=>"2", "id"=>"1"}
+  [1m[35mContact Load (0.5ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered contacts/show.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 456ms (Views: 443.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/clients/2/contacts" for 127.0.0.1 at 2015-12-15 16:18:50 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 2]]
+  Rendered contacts/index.html.erb within layouts/application (110.7ms)
+Completed 500 Internal Server Error in 133ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `client_contact' for #<#<Class:0xb4caa7b0>:0xb51db2c0>):
+    18:         <td><%= contact.data %></td>
+    19:         <td><%= link_to 'Ver', client_contact_path(@client, contact) %></td>
+    20:         <td><%= link_to 'Editar', edit_client_contact_path(@client, contact) %></td>
+    21:         <td><%= link_to 'Eliminar', client_contact(@client), method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
+    22:       </tr>
+    23:     <% end %>
+    24:   </tbody>
+  app/views/contacts/index.html.erb:21:in `block in _app_views_contacts_index_html_erb__920329180__628173638'
+  app/views/contacts/index.html.erb:15:in `_app_views_contacts_index_html_erb__920329180__628173638'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (83.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (29.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (250.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (6.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (140.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (4.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (287.9ms)
+
+
+Started GET "/clients/2/contacts" for 127.0.0.1 at 2015-12-15 16:18:52 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 2]]
+  Rendered contacts/index.html.erb within layouts/application (120.9ms)
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `client_contact' for #<#<Class:0xb4caa7b0>:0xb4a0f71c>):
+    18:         <td><%= contact.data %></td>
+    19:         <td><%= link_to 'Ver', client_contact_path(@client, contact) %></td>
+    20:         <td><%= link_to 'Editar', edit_client_contact_path(@client, contact) %></td>
+    21:         <td><%= link_to 'Eliminar', client_contact(@client), method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
+    22:       </tr>
+    23:     <% end %>
+    24:   </tbody>
+  app/views/contacts/index.html.erb:21:in `block in _app_views_contacts_index_html_erb__920329180__633292428'
+  app/views/contacts/index.html.erb:15:in `_app_views_contacts_index_html_erb__920329180__633292428'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (151.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (32.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (310.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (131.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (266.8ms)
+
+
+Started GET "/clients/2/contacts" for 127.0.0.1 at 2015-12-15 16:19:54 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mContact Load (3.9ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 2]]
+  Rendered contacts/index.html.erb within layouts/application (126.1ms)
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 4.3ms)
+
+ActionView::Template::Error (undefined method `client_contacts' for #<#<Class:0xb4caa7b0>:0xb46b4e50>):
+    18:         <td><%= contact.data %></td>
+    19:         <td><%= link_to 'Ver', client_contact_path(@client, contact) %></td>
+    20:         <td><%= link_to 'Editar', edit_client_contact_path(@client, contact) %></td>
+    21:         <td><%= link_to 'Eliminar', client_contacts(@client), method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
+    22:       </tr>
+    23:     <% end %>
+    24:   </tbody>
+  app/views/contacts/index.html.erb:21:in `block in _app_views_contacts_index_html_erb__920329180__634019448'
+  app/views/contacts/index.html.erb:15:in `_app_views_contacts_index_html_erb__920329180__634019448'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (81.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (29.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (237.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (139.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (277.8ms)
+
+
+Started GET "/clients/2/contacts" for 127.0.0.1 at 2015-12-15 16:20:14 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 2]]
+  Rendered contacts/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 433ms (Views: 426.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/clients/2/contacts/1" for 127.0.0.1 at 2015-12-15 16:20:20 -0300
+Processing by ContactsController#show as HTML
+  Parameters: {"client_id"=>"2", "id"=>"1"}
+  [1m[35mContact Load (0.5ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered contacts/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 416ms (Views: 405.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/clients/2/contacts/1/edit" for 127.0.0.1 at 2015-12-15 16:20:22 -0300
+Processing by ContactsController#edit as HTML
+  Parameters: {"client_id"=>"2", "id"=>"1"}
+  [1m[35mContact Load (0.5ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered contacts/_form.html.erb (20.2ms)
+  Rendered contacts/edit.html.erb within layouts/application (147.6ms)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (undefined method `contact_path' for #<#<Class:0xb4caa7b0>:0xb527f758>):
+    2: 
+    3: <%= render 'form' %>
+    4: 
+    5: <%= link_to 'Show', @contact %> |
+    6: <%= link_to 'Back', contacts_path %>
+  app/views/contacts/edit.html.erb:5:in `_app_views_contacts_edit_html_erb__377056813__627838768'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (73.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (26.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (216.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (132.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (271.7ms)
+
+
+Started GET "/clients/2/contacts/1/edit" for 127.0.0.1 at 2015-12-15 16:20:24 -0300
+Processing by ContactsController#edit as HTML
+  Parameters: {"client_id"=>"2", "id"=>"1"}
+  [1m[35mContact Load (0.5ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.8ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered contacts/_form.html.erb (10.6ms)
+  Rendered contacts/edit.html.erb within layouts/application (127.2ms)
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (undefined method `contact_path' for #<#<Class:0xb4caa7b0>:0xb4ee1844>):
+    2: 
+    3: <%= render 'form' %>
+    4: 
+    5: <%= link_to 'Show', @contact %> |
+    6: <%= link_to 'Back', contacts_path %>
+  app/views/contacts/edit.html.erb:5:in `_app_views_contacts_edit_html_erb__377056813__629733468'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (55.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (19.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (186.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (136.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (4.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (276.7ms)
+
+
+Started GET "/clients/2/contacts/1/edit" for 127.0.0.1 at 2015-12-15 16:21:51 -0300
+Processing by ContactsController#edit as HTML
+  Parameters: {"client_id"=>"2", "id"=>"1"}
+  [1m[35mContact Load (0.5ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered contacts/_form.html.erb (16.9ms)
+  Rendered contacts/edit.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 473ms (Views: 465.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/clients/2/contacts" for 127.0.0.1 at 2015-12-15 16:21:56 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[35mClient Load (0.4ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mContact Load (0.4ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 2]]
+  Rendered contacts/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 424ms (Views: 415.3ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/clients/2/contacts" for 127.0.0.1 at 2015-12-15 16:22:03 -0300
+
+ActionController::RoutingError (No route matches [DELETE] "/clients/2/contacts"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (27.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (78.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (448.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (125.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (271.2ms)
+
+
+Started GET "/clients/2/contacts" for 127.0.0.1 at 2015-12-15 16:23:30 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[35mClient Load (0.8ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 2]]
+  Rendered contacts/index.html.erb within layouts/application (36.3ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :client_id=>"2", :controller=>"contacts", :id=>nil} missing required keys: [:id]):
+    18:         <td><%= contact.data %></td>
+    19:         <td><%= link_to 'Ver', client_contact_path(@client, contact) %></td>
+    20:         <td><%= link_to 'Editar', edit_client_contact_path(@client, contact) %></td>
+    21:         <td><%= link_to 'Eliminar', client_contact_path(@client,@contact), method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
+    22:       </tr>
+    23:     <% end %>
+    24:   </tbody>
+  app/views/contacts/index.html.erb:21:in `block in _app_views_contacts_index_html_erb__920329180__641538618'
+  app/views/contacts/index.html.erb:15:in `_app_views_contacts_index_html_erb__920329180__641538618'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (82.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (25.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (228.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (128.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (269.9ms)
+
+
+Started GET "/clients/" for 127.0.0.1 at 2015-12-15 16:24:00 -0300
+Processing by ClientsController#index as HTML
+  [1m[35mClient Load (0.8ms)[0m  SELECT "clients".* FROM "clients"
+  Rendered clients/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 413ms (Views: 408.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/clients/2" for 127.0.0.1 at 2015-12-15 16:24:04 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered clients/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 409ms (Views: 402.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/clients/2/contacts" for 127.0.0.1 at 2015-12-15 16:24:12 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 2]]
+  Rendered contacts/index.html.erb within layouts/application (20.7ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :client_id=>"2", :controller=>"contacts", :id=>nil} missing required keys: [:id]):
+    18:         <td><%= contact.data %></td>
+    19:         <td><%= link_to 'Ver', client_contact_path(@client, contact) %></td>
+    20:         <td><%= link_to 'Editar', edit_client_contact_path(@client, contact) %></td>
+    21:         <td><%= link_to 'Eliminar', client_contact_path(@client,@contact), method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
+    22:       </tr>
+    23:     <% end %>
+    24:   </tbody>
+  app/views/contacts/index.html.erb:21:in `block in _app_views_contacts_index_html_erb__920329180__641538618'
+  app/views/contacts/index.html.erb:15:in `_app_views_contacts_index_html_erb__920329180__641538618'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (73.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (24.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (214.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (123.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (3.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (260.1ms)
+
+
+Started GET "/clients/2/contacts" for 127.0.0.1 at 2015-12-15 16:24:51 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 2]]
+  Rendered contacts/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 392ms (Views: 383.5ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/clients/2/contacts/1" for 127.0.0.1 at 2015-12-15 16:24:57 -0300
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xRg+3yS5MbeuX3mniHgXehoQwPBgfQ+bzUjGVljTHeU+AfC7G8kORdL7R/b1x2womPDWkoJtxKBa5CV31fmGQg==", "client_id"=>"2", "id"=>"1"}
+  [1m[35mContact Load (0.6ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "contacts" WHERE "contacts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (156.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/clients/2/contacts
+Completed 302 Found in 176ms (ActiveRecord: 158.5ms)
+
+
+Started GET "/clients/2/contacts" for 127.0.0.1 at 2015-12-15 16:24:57 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mContact Load (0.5ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?  [["client_id", 2]]
+  Rendered contacts/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 459ms (Views: 450.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/clients/2/bills" for 127.0.0.1 at 2015-12-15 16:42:19 -0300
+Processing by BillsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[36mClient Load (0.9ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mBill Load (1.1ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 2]]
+  Rendered bills/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 479ms (Views: 379.1ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/clients/2/bills/new" for 127.0.0.1 at 2015-12-15 16:42:55 -0300
+Processing by BillsController#new as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered bills/_form.html.erb (123.3ms)
+  Rendered bills/new.html.erb within layouts/application (131.9ms)
+Completed 500 Internal Server Error in 223ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (undefined method `bills_path' for #<#<Class:0xb4b792d8>:0xb59068ec>):
+    1: <%= form_for(@bill) do |f| %>
+    2:   <% if @bill.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
+  app/views/bills/_form.html.erb:1:in `_app_views_bills__form_html_erb__789139213__624505298'
+  app/views/bills/new.html.erb:3:in `_app_views_bills_new_html_erb___816586302__624416448'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (101.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (34.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (250.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (4.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (125.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (254.0ms)
+
+
+Started GET "/clients/2/bills/new" for 127.0.0.1 at 2015-12-15 16:42:57 -0300
+Processing by BillsController#new as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[35mClient Load (0.7ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered bills/_form.html.erb (132.4ms)
+  Rendered bills/new.html.erb within layouts/application (141.9ms)
+Completed 500 Internal Server Error in 163ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `bills_path' for #<#<Class:0xb4b792d8>:0xb4ceb6ac>):
+    1: <%= form_for(@bill) do |f| %>
+    2:   <% if @bill.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
+  app/views/bills/_form.html.erb:1:in `_app_views_bills__form_html_erb__789139213__630989038'
+  app/views/bills/new.html.erb:3:in `_app_views_bills_new_html_erb___816586302__630761768'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (73.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (26.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (205.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (115.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (236.7ms)
+
+
+Started GET "/clients/2/bills/new" for 127.0.0.1 at 2015-12-15 16:48:29 -0300
+Processing by BillsController#new as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered bills/_form.html.erb (30.9ms)
+  Rendered bills/new.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 357ms (Views: 350.3ms | ActiveRecord: 0.5ms)
