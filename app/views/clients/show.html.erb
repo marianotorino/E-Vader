@@ -1,34 +1,57 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @client.name %>
 </p>
 
 <p>
-  <strong>Surname:</strong>
+  <strong>Apellido:</strong>
   <%= @client.surname %>
 </p>
 
 <p>
-  <strong>Dni:</strong>
+  <strong>DNI:</strong>
   <%= @client.dni %>
 </p>
 
 <p>
-  <strong>Gender:</strong>
+  <strong>Género:</strong>
   <%= @client.gender %>
 </p>
 
 <p>
-  <strong>Birthdate:</strong>
+  <strong>Fecha de nacimiento:</strong>
   <%= @client.birthdate %>
 </p>
 
 <p>
-  <strong>Cuit:</strong>
+  <stong>Edad:</strong>
+  <%= @edad %>
+</p>
+
+<p>
+  <strong>CUIL/CUIT:</strong>
   <%= @client.cuit %>
 </p>
 
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+<% @anios.each do |key, value| %>
+  <p>
+    <%= "En #{key} facturó $#{value}." %>
+  </p>
+<% end %>
+
+<% @cant_bills_by_month.each do |key, value| %>
+  <p>
+    <%= "En #{key} hubo #{value} facturas." %>
+  </p>
+<% end %>
+
+<% @personas.each do |key,value| %>
+  <p>
+    <%= "#{key} con #{value} facturas" %>
+  </p>
+<% end %>
+
+<%= link_to 'Editar', edit_client_path(@client) %> |
+<%= link_to 'Volver', clients_path %>

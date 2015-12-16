@@ -10,6 +10,9 @@ class ClientsController < ApplicationController
   # GET /clients/1
   # GET /clients/1.json
   def show
+    @edad = ((Date.current - @client.birthdate)/365).to_i
+    facturacion_por_anio
+        
   end
 
   # GET /clients/new
@@ -70,5 +73,17 @@ class ClientsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
       params.require(:client).permit(:name, :surname, :dni, :gender, :birthdate, :cuit)
+    end
+
+    def facturacion_por_anio
+      @anios = Hash.new(0)
+      @personas = Hash.new(0)
+      @cant_bills_by_month = Hash.new(0)
+      @client.bills.each do |bill|
+        @anios[bill.date.year] += bill.amount
+        @personas[bill.person.name] ++
+        @cant_bills_by_month[bill.date.month] ++ if Date.today.year == bill.date.year
+      end
+      @personas
     end
 end

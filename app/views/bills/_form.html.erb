@@ -25,7 +25,10 @@
   </div>
   <div class="field">
     <%= f.label :destinatario %><br>
-    <%= f. :person_id %>
+    <%= f.select(:person_id) do %>
+      <% people_array = Person.all.map { |person| ["#{person.name} #{person.cuit}", person.id] } %>
+      <%= options_for_select(people_array) %>
+    <% end %>
   </div>
   <div class="actions">
     <%= f.submit %>
