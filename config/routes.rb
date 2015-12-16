@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root 'clients#index'
+  get 'welcome/index'
+
+  root 'welcome#index'
   resources :clients do
     resources :contacts
     resources :bills

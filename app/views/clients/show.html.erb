@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Datos del cliente</h1>
+
+<%= link_to 'Ver Contactos', client_contacts_path(@client) %> |
+<%= link_to 'Ver Facturas', client_bills_path(@client) %>
+<br>
+
 <p>
   <strong>Nombre:</strong>
   <%= @client.name %>
@@ -27,7 +33,7 @@
 
 <p>
   <stong>Edad:</strong>
-  <%= @edad %>
+  <%= "#{@edad} años" %>
 </p>
 
 <p>
@@ -35,11 +41,15 @@
   <%= @client.cuit %>
 </p>
 
+<h2>Facturación por año:</h2>
+
 <% @anios.each do |key, value| %>
   <p>
     <%= "En #{key} facturó $#{value}." %>
   </p>
 <% end %>
+
+<h2>Facturas por mes del año corriente:</h2>
 
 <% @cant_bills_by_month.each do |key, value| %>
   <p>
@@ -47,11 +57,14 @@
   </p>
 <% end %>
 
+<h2>Personas a las que más se facturó:</h2>
+
 <% @personas.each do |key,value| %>
   <p>
     <%= "#{key} con #{value} facturas" %>
   </p>
 <% end %>
 
+<br>
 <%= link_to 'Editar', edit_client_path(@client) %> |
 <%= link_to 'Volver', clients_path %>

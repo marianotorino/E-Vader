@@ -81,9 +81,13 @@ class ClientsController < ApplicationController
       @cant_bills_by_month = Hash.new(0)
       @client.bills.each do |bill|
         @anios[bill.date.year] += bill.amount
-        @personas[bill.person.name] ++
-        @cant_bills_by_month[bill.date.month] ++ if Date.today.year == bill.date.year
+        @personas[bill.person.name] += 1
+        @cant_bills_by_month[bill.date.month] += 1 if Date.today.year == bill.date.year
       end
-      @personas
+      @cant_bills_by_month = @cant_bills_by_month.sort_by { |k,v| k }.map do |k, v| 
+        k,v = Date::MONTHNAMES[k],v
+      end
+      @anios = @anios.sort_by { |k,v| k }
+      @personas = @personas.sort_by { |k,v| -v }.first 5
     end
 end
