@@ -1,17 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  surname: MyString
-  dni: 1
-  gender: MyString
-  birthdate: 2015-12-15
-  cuit: MyString
+sin_contacto:
+  name: Maria
+  surname: Perez
+  dni: 32456789
+  gender: F
+  birthdate: 1997-08-05
+  cuit: 20-32456789-9
 
-two:
-  name: MyString
-  surname: MyString
-  dni: 1
-  gender: MyString
-  birthdate: 2015-12-15
-  cuit: MyString
+con_contacto:
+  name: Juan
+  surname: Rodriguez
+  dni: 15673837
+  gender: M
+  birthdate: 1975-05-15
+  cuit: 20-15673837-9
+
+invalido:
+  name: 4334
+  surname: 34FDSF
+  dni: fsdsff
+  gender: Hombre
+  birthdate: 2012-09-53
+  cuit: 20-5435435-9
