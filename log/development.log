@@ -2427,3 +2427,636 @@ Processing by ClientsController#show as HTML
   [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
   Rendered clients/show.html.erb within layouts/application (3.1ms)
 Completed 200 OK in 469ms (Views: 308.7ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-17 11:24:17 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 2238ms (Views: 2152.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bills.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-17 11:24:21 -0300
+
+
+Started GET "/assets/clients.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-17 11:24:21 -0300
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-17 11:24:21 -0300
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-17 11:24:21 -0300
+
+
+Started GET "/assets/scaffolds.self-3a969dd78e1062d361cf98279510766dae0340d7bd86dc03acb05522fd9a6487.css?body=1" for 127.0.0.1 at 2015-12-17 11:24:21 -0300
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-17 11:24:21 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-17 11:24:21 -0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-17 11:24:22 -0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-17 11:24:22 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-17 11:24:22 -0300
+
+
+Started GET "/assets/bills.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-17 11:24:22 -0300
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-17 11:24:22 -0300
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-17 11:24:22 -0300
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-17 11:24:22 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-17 11:24:22 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-17 11:24:22 -0300
+
+
+Started GET "/people" for 127.0.0.1 at 2015-12-17 11:24:36 -0300
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.8ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (59.7ms)
+Completed 200 OK in 581ms (Views: 562.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2015-12-17 11:24:41 -0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 655ms (Views: 652.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-12-17 11:24:46 -0300
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (1.0ms)[0m  [1mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (80.1ms)
+Completed 200 OK in 694ms (Views: 609.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/clients/2" for 127.0.0.1 at 2015-12-17 11:25:08 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mClient Load (1.4ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mBill Load (3.2ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?[0m  [["client_id", 2]]
+  [1m[35mPerson Load (0.8ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered clients/show.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 865ms (Views: 451.7ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/clients/2" for 127.0.0.1 at 2015-12-17 11:27:47 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mClient Load (8.7ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mBill Load (0.7ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 2]]
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (2.9ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (2.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered clients/show.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 486ms (Views: 439.8ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/clients/2/bills" for 127.0.0.1 at 2015-12-17 11:27:53 -0300
+Processing by BillsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[35mClient Load (0.6ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mBill Load (0.6ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?[0m  [["client_id", 2]]
+  Rendered bills/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 558ms (Views: 546.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/clients/2" for 127.0.0.1 at 2015-12-17 11:28:00 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mBill Load (0.6ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?[0m  [["client_id", 2]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered clients/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 465ms (Views: 440.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/clients/2/contacts" for 127.0.0.1 at 2015-12-17 11:28:02 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[36mClient Load (0.8ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mContact Load (0.9ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?  [["client_id", 2]]
+  Rendered contacts/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 582ms (Views: 530.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/clients/2/contacts" for 127.0.0.1 at 2015-12-17 11:29:45 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mContact Load (0.5ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?  [["client_id", 2]]
+  Rendered contacts/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 442ms (Views: 435.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/clients/2" for 127.0.0.1 at 2015-12-17 12:23:45 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ramiro/Git/E-Vader/app/models/client.rb:7: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  validates :gender inclusion: { in: %w(M F), message: "ad...
+                             ^
+/home/ramiro/Git/E-Vader/app/models/client.rb:9: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  validates :dni length: { minimum: 7 }
+                       ^):
+  app/models/client.rb:7: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/models/client.rb:9: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/controllers/clients_controller.rb:81:in `set_client'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (60.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (21.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (248.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (135.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (6.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (360.8ms)
+
+
+Started GET "/clients/2" for 127.0.0.1 at 2015-12-17 12:23:47 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ramiro/Git/E-Vader/app/models/client.rb:7: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  validates :gender inclusion: { in: %w(M F), message: "ad...
+                             ^
+/home/ramiro/Git/E-Vader/app/models/client.rb:9: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  validates :dni length: { minimum: 7 }
+                       ^):
+  app/models/client.rb:7: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/models/client.rb:9: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/controllers/clients_controller.rb:81:in `set_client'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (51.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (212.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (123.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (251.2ms)
+
+
+Started GET "/clients/2" for 127.0.0.1 at 2015-12-17 12:24:55 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mClient Load (0.7ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mBill Load (1.3ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 2]]
+Completed 500 Internal Server Error in 197ms (ActiveRecord: 35.6ms)
+
+SyntaxError (/home/ramiro/Git/E-Vader/app/models/person.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :cuit, uniqueness: { message: "ya existe en el sistema" }
+             ^):
+  app/models/person.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/clients_controller.rb:19:in `block in show'
+  app/controllers/clients_controller.rb:17:in `show'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (52.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (19.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (158.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (95.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (198.9ms)
+
+
+Started GET "/clients/2" for 127.0.0.1 at 2015-12-17 12:25:40 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mClient Load (0.9ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mBill Load (0.8ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 2]]
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (1.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered clients/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 494ms (Views: 305.9ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-12-17 12:25:48 -0300
+Processing by ClientsController#index as HTML
+  [1m[35mClient Load (0.7ms)[0m  SELECT "clients".* FROM "clients"
+  Rendered clients/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 353ms (Views: 349.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-12-17 12:25:50 -0300
+Processing by ClientsController#new as HTML
+  Rendered clients/_form.html.erb (250.0ms)
+  Rendered clients/new.html.erb within layouts/application (255.9ms)
+Completed 200 OK in 657ms (Views: 654.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2015-12-17 12:26:32 -0300
+Processing by ClientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SYjmiTgKG/b1n6s0IrbGYqf3shDYqtOLNoIjtCYcD6OxnkVj+JgtgZKq87YanyJC762Qv7YVNKKt2BIyH5doJg==", "client"=>{"name"=>"Juan", "surname"=>"Lopez", "dni"=>"45678", "birthdate(1i)"=>"2012", "birthdate(2i)"=>"7", "birthdate(3i)"=>"15", "cuit"=>"20-9687-0"}, "gender"=>"M", "commit"=>"Create Client"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered clients/_form.html.erb (42.6ms)
+  Rendered clients/new.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 427ms (Views: 405.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-12-17 12:27:57 -0300
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (1.2ms)[0m  [1mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 332ms (Views: 327.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-12-17 12:28:00 -0300
+Processing by ClientsController#new as HTML
+  Rendered clients/_form.html.erb (119.9ms)
+  Rendered clients/new.html.erb within layouts/application (123.0ms)
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `cuit' for #<#<Class:0xb4b2bda8>:0xb924633c>):
+    35:     <%= f.date_select :birthdate %>
+    36:   </div>
+    37:   <div class="field">
+    38:     <%= f.label :cuil/cuit %><br>
+    39:     <%= f.text_field :cuit %>
+    40:   </div>
+    41:   <div class="actions">
+  app/views/clients/_form.html.erb:38:in `block in _app_views_clients__form_html_erb__57415651__595520268'
+  app/views/clients/_form.html.erb:1:in `_app_views_clients__form_html_erb__57415651__595520268'
+  app/views/clients/new.html.erb:3:in `_app_views_clients_new_html_erb___553660971__591038068'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (50.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (19.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (150.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (86.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (179.4ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-12-17 12:28:02 -0300
+Processing by ClientsController#new as HTML
+  Rendered clients/_form.html.erb (121.6ms)
+  Rendered clients/new.html.erb within layouts/application (125.3ms)
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `cuit' for #<#<Class:0xb4b2bda8>:0xba088418>):
+    35:     <%= f.date_select :birthdate %>
+    36:   </div>
+    37:   <div class="field">
+    38:     <%= f.label :cuil/cuit %><br>
+    39:     <%= f.text_field :cuit %>
+    40:   </div>
+    41:   <div class="actions">
+  app/views/clients/_form.html.erb:38:in `block in _app_views_clients__form_html_erb__57415651__587054678'
+  app/views/clients/_form.html.erb:1:in `_app_views_clients__form_html_erb__57415651__587054678'
+  app/views/clients/new.html.erb:3:in `_app_views_clients_new_html_erb___553660971__630965128'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (63.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (23.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (182.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (123.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (221.9ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-12-17 12:28:33 -0300
+Processing by ClientsController#new as HTML
+  Rendered clients/_form.html.erb (68.3ms)
+  Rendered clients/new.html.erb within layouts/application (72.6ms)
+Completed 200 OK in 376ms (Views: 373.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2015-12-17 12:29:07 -0300
+Processing by ClientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PI4rOkOO7jGVvUA5MpTtGJHxoJTTrzx34pcJZt/N4qLEmIjQgxzYRvKIGLsKvQk42auCO70Q2155zTjg5kaFJw==", "client"=>{"name"=>"Rogelio", "surname"=>"Funes Mori", "dni"=>"524245", "birthdate(1i)"=>"2015", "birthdate(2i)"=>"12", "birthdate(3i)"=>"17", "cuit"=>"30-323425-2"}, "gender"=>"M", "commit"=>"Create Client"}
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  Rendered clients/_form.html.erb (49.2ms)
+  Rendered clients/new.html.erb within layouts/application (52.8ms)
+Completed 200 OK in 363ms (Views: 334.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2015-12-17 12:31:48 -0300
+Processing by ClientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3a2X5aF0QXfeMPdkRReJuvw7OzDhf1BCPgRH5MD7HgYluzQPYeZ3ALkFr+Z9Pm2atGEZn4/At2ulXnZi+XB5gw==", "client"=>{"name"=>"Rogelio", "surname"=>"Funes Mori", "dni"=>"524245", "birthdate(1i)"=>"2015", "birthdate(2i)"=>"12", "birthdate(3i)"=>"17", "cuit"=>"30-323425-2"}, "gender"=>"M", "commit"=>"Create Client"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  Rendered clients/_form.html.erb (52.7ms)
+  Rendered clients/new.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 584ms (Views: 484.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-12-17 12:35:02 -0300
+Processing by ClientsController#index as HTML
+  [1m[35mClient Load (2.4ms)[0m  SELECT "clients".* FROM "clients"
+  Rendered clients/index.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 381ms (Views: 352.5ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-12-17 12:35:04 -0300
+Processing by ClientsController#new as HTML
+  Rendered clients/_form.html.erb (76.8ms)
+  Rendered clients/new.html.erb within layouts/application (80.0ms)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `radio_button_tag' for #<ActionView::Helpers::FormBuilder:0xb53dd924>):
+    25:   </div>
+    26:   <div class="field">
+    27:     <%= f.label :genero %><br>
+    28:     <%= f.radio_button_tag(:gender, "M") %>
+    29:     <%= label_tag(:male, "M") %>
+    30:     <%= f.radio_button_tag(:gender, "F") %>
+    31:     <%= label_tag(:female, "F") %>
+  app/views/clients/_form.html.erb:28:in `block in _app_views_clients__form_html_erb__57415651__626969828'
+  app/views/clients/_form.html.erb:1:in `_app_views_clients__form_html_erb__57415651__626969828'
+  app/views/clients/new.html.erb:3:in `_app_views_clients_new_html_erb___553660971__591038068'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (51.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (19.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (153.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (86.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (179.4ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-12-17 12:35:06 -0300
+Processing by ClientsController#new as HTML
+  Rendered clients/_form.html.erb (80.7ms)
+  Rendered clients/new.html.erb within layouts/application (84.1ms)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `radio_button_tag' for #<ActionView::Helpers::FormBuilder:0xb58d4450>):
+    25:   </div>
+    26:   <div class="field">
+    27:     <%= f.label :genero %><br>
+    28:     <%= f.radio_button_tag(:gender, "M") %>
+    29:     <%= label_tag(:male, "M") %>
+    30:     <%= f.radio_button_tag(:gender, "F") %>
+    31:     <%= label_tag(:female, "F") %>
+  app/views/clients/_form.html.erb:28:in `block in _app_views_clients__form_html_erb__57415651__626350548'
+  app/views/clients/_form.html.erb:1:in `_app_views_clients__form_html_erb__57415651__626350548'
+  app/views/clients/new.html.erb:3:in `_app_views_clients_new_html_erb___553660971__630965128'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (54.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (19.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (157.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (91.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (188.8ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-12-17 12:38:52 -0300
+Processing by ClientsController#new as HTML
+  Rendered clients/_form.html.erb (42.1ms)
+  Rendered clients/new.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 397ms (Views: 393.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-12-17 12:39:58 -0300
+Processing by ClientsController#new as HTML
+  Rendered clients/_form.html.erb (39.9ms)
+  Rendered clients/new.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 349ms (Views: 344.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-12-17 12:41:11 -0300
+Processing by ClientsController#new as HTML
+  Rendered clients/_form.html.erb (41.2ms)
+  Rendered clients/new.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 370ms (Views: 366.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2015-12-17 12:41:44 -0300
+Processing by ClientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZjO/wNC+wAQCuKh0RDuHuEpcO2JWSKH9eaX9PaKX4MqeJRwqECz2c2WN8PZ8EmOYAgYZzTj3RtTi/8y7mxyHTw==", "client"=>{"name"=>"Arturo", "surname"=>"Celoso", "dni"=>"87837254", "gender"=>"M", "birthdate(1i)"=>"2015", "birthdate(2i)"=>"12", "birthdate(3i)"=>"17", "cuit"=>""}, "commit"=>"Create Client"}
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  Rendered clients/_form.html.erb (36.8ms)
+  Rendered clients/new.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 475ms (Views: 441.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-12-17 12:47:11 -0300
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (1.0ms)[0m  [1mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 358ms (Views: 353.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-12-17 12:47:14 -0300
+Processing by ClientsController#new as HTML
+  Rendered clients/_form.html.erb (39.0ms)
+  Rendered clients/new.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 342ms (Views: 340.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-12-17 12:49:22 -0300
+Processing by ClientsController#index as HTML
+  [1m[35mClient Load (0.6ms)[0m  SELECT "clients".* FROM "clients"
+  Rendered clients/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 369ms (Views: 364.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/clients/2" for 127.0.0.1 at 2015-12-17 12:49:26 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mClient Load (1.1ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mBill Load (0.8ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 2]]
+  [1m[36mPerson Load (0.9ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered clients/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 487ms (Views: 339.6ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/clients/2/bills" for 127.0.0.1 at 2015-12-17 12:49:28 -0300
+Processing by BillsController#index as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mBill Load (0.6ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?[0m  [["client_id", 2]]
+  Rendered bills/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 346ms (Views: 337.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/clients/2/bills/new" for 127.0.0.1 at 2015-12-17 12:49:30 -0300
+Processing by BillsController#new as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered bills/_form.html.erb (9.0ms)
+  Rendered bills/new.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/home/ramiro/Git/E-Vader/app/views/bills/_form.html.erb:24: syntax error, unexpected '}', expecting ')'
+... 30, end_year:Date.today.year }) );@output_buffer.safe_appen...
+...                               ^
+/home/ramiro/Git/E-Vader/app/views/bills/_form.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/ramiro/Git/E-Vader/app/views/bills/_form.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ramiro/Git/E-Vader/app/views/bills/_form.html.erb:40: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/bills/_form.html.erb:24: syntax error, unexpected '}', expecting ')'
+  app/views/bills/_form.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
+  app/views/bills/_form.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/bills/_form.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+  app/views/bills/new.html.erb:3:in `_app_views_bills_new_html_erb___83798112__576134388'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (110.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (34.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (262.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (91.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (200.6ms)
+
+
+Started GET "/clients/2/bills/new" for 127.0.0.1 at 2015-12-17 12:49:33 -0300
+Processing by BillsController#new as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[36mClient Load (0.7ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered bills/_form.html.erb (63.3ms)
+  Rendered bills/new.html.erb within layouts/application (67.5ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 0.7ms)
+
+SyntaxError (/home/ramiro/Git/E-Vader/app/views/bills/_form.html.erb:24: syntax error, unexpected '}', expecting ')'
+... 30, end_year:Date.today.year }) );@output_buffer.safe_appen...
+...                               ^
+/home/ramiro/Git/E-Vader/app/views/bills/_form.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/ramiro/Git/E-Vader/app/views/bills/_form.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ramiro/Git/E-Vader/app/views/bills/_form.html.erb:40: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/bills/_form.html.erb:24: syntax error, unexpected '}', expecting ')'
+  app/views/bills/_form.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
+  app/views/bills/_form.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/bills/_form.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+  app/views/bills/new.html.erb:3:in `_app_views_bills_new_html_erb___83798112__575083248'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (56.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (23.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (165.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (104.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (210.0ms)
+
+
+Started GET "/clients/2/bills/new" for 127.0.0.1 at 2015-12-17 12:50:14 -0300
+Processing by BillsController#new as HTML
+  Parameters: {"client_id"=>"2"}
+  [1m[35mClient Load (0.4ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered bills/_form.html.erb (87.1ms)
+  Rendered bills/new.html.erb within layouts/application (91.4ms)
+Completed 200 OK in 390ms (Views: 383.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-17 13:25:15 -0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 308ms (Views: 305.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2015-12-17 13:25:18 -0300
+Processing by ClientsController#index as HTML
+  [1m[35mClient Load (2.4ms)[0m  SELECT "clients".* FROM "clients"
+  Rendered clients/index.html.erb within layouts/application (67.6ms)
+Completed 200 OK in 511ms (Views: 477.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2015-12-17 13:25:19 -0300
+Processing by ClientsController#new as HTML
+  Rendered clients/_form.html.erb (47.9ms)
+  Rendered clients/new.html.erb within layouts/application (52.3ms)
+Completed 200 OK in 349ms (Views: 345.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2015-12-17 13:25:26 -0300
+Processing by ClientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CnTovOAAx5jhnBvq22t4LQE0pjPzMv5opiU6OInNLS7yYktWIJLx74apQ2jjQpwNSW6EnJ2NGUE9fwu+sEZKqw==", "client"=>{"name"=>"", "surname"=>"", "dni"=>"", "gender"=>"M", "birthdate(1i)"=>"2015", "birthdate(2i)"=>"12", "birthdate(3i)"=>"17", "cuit"=>""}, "commit"=>"Create Client"}
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  Rendered clients/_form.html.erb (84.4ms)
+  Rendered clients/new.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 524ms (Views: 461.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2015-12-17 13:25:58 -0300
+Processing by ClientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W/0yPTtl02S3ix8wJLpJmy1biIwfYCXrHqGlwZ+tAY6j65HX+/flE9C+R7Ick627ZQGqI3HfwsKF+5RHpiZmCw==", "client"=>{"name"=>"Juan Carlos", "surname"=>"Pelotudo", "dni"=>"", "gender"=>"M", "birthdate(1i)"=>"2015", "birthdate(2i)"=>"12", "birthdate(3i)"=>"17", "cuit"=>""}, "commit"=>"Create Client"}
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  Rendered clients/_form.html.erb (65.4ms)
+  Rendered clients/new.html.erb within layouts/application (69.4ms)
+Completed 200 OK in 516ms (Views: 482.2ms | ActiveRecord: 0.6ms)

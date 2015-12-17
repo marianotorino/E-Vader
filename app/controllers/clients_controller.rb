@@ -11,8 +11,19 @@ class ClientsController < ApplicationController
   # GET /clients/1.json
   def show
     @edad = ((Date.current - @client.birthdate)/365).to_i
-    facturacion_por_anio
-        
+    @anios = Hash.new(0)
+    @personas = Hash.new(0)
+    @cant_bills_by_month = Hash.new(0)
+    @client.bills.each do |bill|
+      @anios[bill.date.year] += bill.amount
+      @personas[bill.person] += 1
+      @cant_bills_by_month[bill.date.month] += 1 if Date.today.year == bill.date.year
+    end
+    @cant_bills_by_month = @cant_bills_by_month.sort_by { |k,v| k }.map do |k, v|
+      k,v = Date::MONTHNAMES[k],v
+    end
+    @anios = @anios.sort_by { |k,v| k }
+    @personas = @personas.sort_by { |k,v| -v }.first 5
   end
 
   # GET /clients/new
@@ -31,7 +42,7 @@ class ClientsController < ApplicationController
 
     respond_to do |format|
       if @client.save
-        format.html { redirect_to @client, notice: 'Client was successfully created.' }
+        format.html { redirect_to @client, notice: 'El cliente ha sido creado.' }
         format.json { render :show, status: :created, location: @client }
       else
         format.html { render :new }
@@ -45,7 +56,7 @@ class ClientsController < ApplicationController
   def update
     respond_to do |format|
       if @client.update(client_params)
-        format.html { redirect_to @client, notice: 'Client was successfully updated.' }
+        format.html { redirect_to @client, notice: 'El cliente ha sido actualizado.' }
         format.json { render :show, status: :ok, location: @client }
       else
         format.html { render :edit }
@@ -59,7 +70,7 @@ class ClientsController < ApplicationController
   def destroy
     @client.destroy
     respond_to do |format|
-      format.html { redirect_to clients_url, notice: 'Client was successfully destroyed.' }
+      format.html { redirect_to clients_url, notice: 'El cliente ha sido eliminado.' }
       format.json { head :no_content }
     end
   end
@@ -73,21 +84,5 @@ class ClientsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
       params.require(:client).permit(:name, :surname, :dni, :gender, :birthdate, :cuit)
-    end
-
-    def facturacion_por_anio
-      @anios = Hash.new(0)
-      @personas = Hash.new(0)
-      @cant_bills_by_month = Hash.new(0)
-      @client.bills.each do |bill|
-        @anios[bill.date.year] += bill.amount
-        @personas[bill.person.name] += 1
-        @cant_bills_by_month[bill.date.month] += 1 if Date.today.year == bill.date.year
-      end
-      @cant_bills_by_month = @cant_bills_by_month.sort_by { |k,v| k }.map do |k, v| 
-        k,v = Date::MONTHNAMES[k],v
-      end
-      @anios = @anios.sort_by { |k,v| k }
-      @personas = @personas.sort_by { |k,v| -v }.first 5
     end
 end

@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :nombre %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :surname %><br>
+    <%= f.label :apellido %><br>
     <%= f.text_field :surname %>
   </div>
   <div class="field">
@@ -24,15 +24,18 @@
     <%= f.number_field :dni %>
   </div>
   <div class="field">
-    <%= f.label :gender %><br>
-    <%= f.text_field :gender %>
+    <%= f.label :genero %><br>
+    <%= radio_button_tag("client[gender]", "M") %>
+    <%= label_tag(:male, "M") %>
+    <%= radio_button_tag("client[gender]", "F") %>
+    <%= label_tag(:female, "F") %>
   </div>
   <div class="field">
-    <%= f.label :birthdate %><br>
-    <%= f.date_select :birthdate %>
+    <%= f.label :fecha_de_nacimiento %><br>
+    <%= f.date_select(:birthdate, { start_year: 1930, end_year: Date.today.year }) %>
   </div>
   <div class="field">
-    <%= f.label :cuit %><br>
+    <%= f.label :cuil_o_cuit %><br>
     <%= f.text_field :cuit %>
   </div>
   <div class="actions">
