@@ -226,3 +226,152 @@ ClientTest: test_Creacion_de_un_cliente
   [1m[35mClient Exists (0.5ms)[0m  SELECT  1 AS one FROM "clients" WHERE ("clients"."cuit" = '20-5435435-9' AND "clients"."id" != 575441185) LIMIT 1
   [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
   [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mFixture Delete (14.2ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "contacts" ("kind", "data", "created_at", "updated_at", "id", "client_id") VALUES ('Skype', 'usuario_de_skype', '2015-12-18 20:49:45', '2015-12-18 20:49:45', 980190962, 127088219)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "bills"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "bills" ("amount", "description", "date", "created_at", "updated_at", "id", "client_id") VALUES (500.34, 'Insumos para libreria', '2015-11-15', '2015-12-18 20:49:45', '2015-12-18 20:49:45', 99918873, 127088219)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "bills" ("amount", "description", "date", "created_at", "updated_at", "id", "person_id", "client_id") VALUES (1000.0, 'Papel para diario', '2015-12-15', '2015-12-18 20:49:45', '2015-12-18 20:49:45', 87643902, 861546715, 127088219)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "people"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "people" ("name", "cuit", "created_at", "updated_at", "id") VALUES ('Pablo', '20-23432422-9', '2015-12-18 20:49:45', '2015-12-18 20:49:45', 861546715)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "clients"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "clients" ("name", "surname", "dni", "gender", "birthdate", "cuit", "created_at", "updated_at", "id") VALUES ('Maria', 'Perez', 32456789, 'F', '1997-08-05', '20-32456789-9', '2015-12-18 20:49:45', '2015-12-18 20:49:45', 591270375)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "clients" ("name", "surname", "dni", "gender", "birthdate", "cuit", "created_at", "updated_at", "id") VALUES ('Juan', 'Rodriguez', 15673837, 'M', '1975-05-15', '20-15673837-9', '2015-12-18 20:49:45', '2015-12-18 20:49:45', 127088219)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "clients" ("name", "surname", "dni", "gender", "birthdate", "cuit", "created_at", "updated_at", "id") VALUES ('4334', '34FDSF', 0, 'Hombre', '2012-09-53', '20-5435435-9', '2015-12-18 20:49:45', '2015-12-18 20:49:45', 575441185)[0m
+  [1m[35m (178.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+---------------------------------------
+ClientTest: test_Creacion_de_un_cliente
+---------------------------------------
+  [1m[35mClient Load (0.8ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 591270375]]
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 127088219]]
+  [1m[35mClient Load (0.3ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 575441185]]
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mClient Exists (0.5ms)[0m  SELECT  1 AS one FROM "clients" WHERE ("clients"."dni" = 32456789 AND "clients"."id" != 591270375) LIMIT 1
+  [1m[36mClient Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE ("clients"."cuit" = '20-32456789-9' AND "clients"."id" != 591270375) LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 127088219]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mClient Exists (0.4ms)[0m  SELECT  1 AS one FROM "clients" WHERE ("clients"."dni" = 15673837 AND "clients"."id" != 127088219) LIMIT 1
+  [1m[36mClient Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE ("clients"."cuit" = '20-15673837-9' AND "clients"."id" != 127088219) LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mClient Exists (0.4ms)[0m  SELECT  1 AS one FROM "clients" WHERE ("clients"."dni" = 0 AND "clients"."id" != 575441185) LIMIT 1
+  [1m[36mClient Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE ("clients"."cuit" = '20-5435435-9' AND "clients"."id" != 575441185) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+------------------------------------
+ClientTest: test_Borrado_de_clientes
+------------------------------------
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 591270375]]
+  [1m[35mClient Load (0.3ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 127088219]]
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 575441185]]
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mClient Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE ("clients"."dni" = 32456789 AND "clients"."id" != 591270375) LIMIT 1[0m
+  [1m[35mClient Exists (0.4ms)[0m  SELECT  1 AS one FROM "clients" WHERE ("clients"."cuit" = '20-32456789-9' AND "clients"."id" != 591270375) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mClient Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE ("clients"."dni" = 15673837 AND "clients"."id" != 127088219) LIMIT 1[0m
+  [1m[35mClient Exists (0.4ms)[0m  SELECT  1 AS one FROM "clients" WHERE ("clients"."cuit" = '20-15673837-9' AND "clients"."id" != 127088219) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mBill Load (0.6ms)[0m  SELECT  "bills".* FROM "bills" WHERE "bills"."id" = ? LIMIT 1  [["id", 87643902]]
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (18.3ms)[0m  [1mSELECT COUNT(*) FROM "clients"[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mContact Load (0.7ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 591270375]]
+  [1m[35mBill Load (0.6ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 591270375]]
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "clients" WHERE "clients"."id" = ?[0m  [["id", 591270375]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "clients"[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "clients"
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Load (0.3ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?  [["client_id", 127088219]]
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "contacts" WHERE "contacts"."id" = ?[0m  [["id", 980190962]]
+  [1m[35mBill Load (0.3ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 127088219]]
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "bills" WHERE "bills"."id" = ?[0m  [["id", 87643902]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "bills" WHERE "bills"."id" = ?  [["id", 99918873]]
+  [1m[36mSQL (21.3ms)[0m  [1mDELETE FROM "clients" WHERE "clients"."id" = ?[0m  [["id", 127088219]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "clients"[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "contacts"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "contacts" ("kind", "data", "created_at", "updated_at", "id", "client_id") VALUES ('Skype', 'usuario_de_skype', '2015-12-18 20:53:01', '2015-12-18 20:53:01', 980190962, 127088219)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "bills"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "bills" ("amount", "description", "date", "created_at", "updated_at", "id", "client_id") VALUES (500.34, 'Insumos para libreria', '2015-11-15', '2015-12-18 20:53:01', '2015-12-18 20:53:01', 99918873, 127088219)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "bills" ("amount", "description", "date", "created_at", "updated_at", "id", "person_id", "client_id") VALUES (1000.0, 'Papel para diario', '2015-12-15', '2015-12-18 20:53:01', '2015-12-18 20:53:01', 87643902, 861546715, 127088219)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "people"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "people" ("name", "cuit", "created_at", "updated_at", "id") VALUES ('Pablo', '20-23432422-9', '2015-12-18 20:53:01', '2015-12-18 20:53:01', 861546715)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "clients"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "clients" ("name", "surname", "dni", "gender", "birthdate", "cuit", "created_at", "updated_at", "id") VALUES ('Maria', 'Perez', 32456789, 'F', '1997-08-05', '20-32456789-9', '2015-12-18 20:53:01', '2015-12-18 20:53:01', 591270375)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "clients" ("name", "surname", "dni", "gender", "birthdate", "cuit", "created_at", "updated_at", "id") VALUES ('Juan', 'Rodriguez', 15673837, 'M', '1975-05-15', '20-15673837-9', '2015-12-18 20:53:01', '2015-12-18 20:53:01', 127088219)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "clients" ("name", "surname", "dni", "gender", "birthdate", "cuit", "created_at", "updated_at", "id") VALUES ('4334', '34FDSF', 0, 'Hombre', '2012-09-53', '20-5435435-9', '2015-12-18 20:53:01', '2015-12-18 20:53:01', 575441185)[0m
+  [1m[35m (170.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+------------------------------------
+ClientTest: test_Borrado_de_clientes
+------------------------------------
+  [1m[35mClient Load (0.9ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 591270375]]
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 127088219]]
+  [1m[35mClient Load (0.3ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 575441185]]
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mClient Exists (0.4ms)[0m  SELECT  1 AS one FROM "clients" WHERE ("clients"."dni" = 32456789 AND "clients"."id" != 591270375) LIMIT 1
+  [1m[36mClient Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE ("clients"."cuit" = '20-32456789-9' AND "clients"."id" != 591270375) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mClient Exists (0.4ms)[0m  SELECT  1 AS one FROM "clients" WHERE ("clients"."dni" = 15673837 AND "clients"."id" != 127088219) LIMIT 1
+  [1m[36mClient Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE ("clients"."cuit" = '20-15673837-9' AND "clients"."id" != 127088219) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBill Load (0.6ms)[0m  [1mSELECT  "bills".* FROM "bills" WHERE "bills"."id" = ? LIMIT 1[0m  [["id", 87643902]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "clients"
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?  [["client_id", 591270375]]
+  [1m[36mBill Load (0.6ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?[0m  [["client_id", 591270375]]
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "clients" WHERE "clients"."id" = ?  [["id", 591270375]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "clients"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "clients"[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mContact Load (0.3ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 127088219]]
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "contacts" WHERE "contacts"."id" = ?  [["id", 980190962]]
+  [1m[36mBill Load (0.3ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?[0m  [["client_id", 127088219]]
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "bills" WHERE "bills"."id" = ?  [["id", 87643902]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "bills" WHERE "bills"."id" = ?[0m  [["id", 99918873]]
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "clients" WHERE "clients"."id" = ?  [["id", 127088219]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "clients"
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+---------------------------------------
+ClientTest: test_Creacion_de_un_cliente
+---------------------------------------
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 591270375]]
+  [1m[35mClient Load (0.2ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 127088219]]
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 575441185]]
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mClient Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE ("clients"."dni" = 32456789 AND "clients"."id" != 591270375) LIMIT 1[0m
+  [1m[35mClient Exists (0.4ms)[0m  SELECT  1 AS one FROM "clients" WHERE ("clients"."cuit" = '20-32456789-9' AND "clients"."id" != 591270375) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mContact Load (0.7ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mClient Load (0.3ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 127088219]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mClient Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE ("clients"."dni" = 15673837 AND "clients"."id" != 127088219) LIMIT 1[0m
+  [1m[35mClient Exists (0.4ms)[0m  SELECT  1 AS one FROM "clients" WHERE ("clients"."cuit" = '20-15673837-9' AND "clients"."id" != 127088219) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mClient Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE ("clients"."dni" = 0 AND "clients"."id" != 575441185) LIMIT 1[0m
+  [1m[35mClient Exists (0.5ms)[0m  SELECT  1 AS one FROM "clients" WHERE ("clients"."cuit" = '20-5435435-9' AND "clients"."id" != 575441185) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction

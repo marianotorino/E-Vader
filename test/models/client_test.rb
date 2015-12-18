@@ -12,6 +12,7 @@ class ClientTest < ActiveSupport::TestCase
 
   test "Creacion de un cliente" do
     assert @client_sin_contacto.save
+    contacts(:one).save
     assert @client_con_contacto.save
     assert_not @client_invalido.save
   end
