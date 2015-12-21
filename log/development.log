@@ -4725,3 +4725,126 @@ Processing by ClientsController#show as HTML
   [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 6]]
   Rendered clients/show.html.erb within layouts/application (11.0ms)
 Completed 200 OK in 356ms (Views: 313.3ms | ActiveRecord: 4.9ms)
+  [1m[36mClient Load (22.8ms)[0m  [1mSELECT "clients".* FROM "clients"[0m
+  [1m[36m (136.4ms)[0m  [1mCREATE TABLE "bills" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "amount" float, "description" text, "date" date, "person_id" integer, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (128.4ms)[0m  [1mCREATE  INDEX "index_bills_on_client_id" ON "bills" ("client_id")[0m
+  [1m[35m (0.7ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bills_on_client_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bills_on_client_id' AND type='index'
+
+  [1m[36m (140.1ms)[0m  [1mCREATE  INDEX "index_bills_on_person_id" ON "bills" ("person_id")[0m
+  [1m[35m (141.6ms)[0m  CREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "surname" varchar, "dni" integer, "gender" varchar, "birthdate" date, "cuit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (143.7ms)[0m  [1mCREATE TABLE "contacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "kind" varchar, "data" text, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (120.0ms)[0m  CREATE  INDEX "index_contacts_on_client_id" ON "contacts" ("client_id")
+  [1m[36m (119.9ms)[0m  [1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "cuit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (127.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (154.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.7ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (165.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151215185059')[0m
+  [1m[35m (145.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151215184448')
+  [1m[36m (167.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151215185011')[0m
+  [1m[35m (145.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151215184823')
+  [1m[36m (136.9ms)[0m  [1mCREATE TABLE "bills" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "amount" float, "description" text, "date" date, "person_id" integer, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (131.7ms)[0m  [1mCREATE  INDEX "index_bills_on_client_id" ON "bills" ("client_id")[0m
+  [1m[35m (0.9ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bills_on_client_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bills_on_client_id' AND type='index'
+
+  [1m[36m (139.8ms)[0m  [1mCREATE  INDEX "index_bills_on_person_id" ON "bills" ("person_id")[0m
+  [1m[35m (141.9ms)[0m  CREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "surname" varchar, "dni" integer, "gender" varchar, "birthdate" date, "cuit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (142.0ms)[0m  [1mCREATE TABLE "contacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "kind" varchar, "data" text, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (142.9ms)[0m  CREATE  INDEX "index_contacts_on_client_id" ON "contacts" ("client_id")
+  [1m[36m (164.7ms)[0m  [1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "cuit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (143.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (153.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (154.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151215185059')[0m
+  [1m[35m (156.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151215184448')
+  [1m[36m (156.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151215185011')[0m
+  [1m[35m (180.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151215184823')
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mClient Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE "clients"."dni" = 19354678 LIMIT 1[0m
+  [1m[35mClient Exists (0.5ms)[0m  SELECT  1 AS one FROM "clients" WHERE "clients"."cuit" = '20-19354678-9' LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "clients" ("name", "surname", "birthdate", "dni", "cuit", "gender", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Joaquin"], ["surname", "Gonzalez"], ["birthdate", "1970-03-23"], ["dni", 19354678], ["cuit", "20-19354678-9"], ["gender", "M"], ["created_at", "2015-12-21 20:33:50.002433"], ["updated_at", "2015-12-21 20:33:50.002433"]]
+  [1m[35m (138.3ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mClient Exists (1.9ms)[0m  SELECT  1 AS one FROM "clients" WHERE "clients"."dni" = 25876543 LIMIT 1
+  [1m[36mClient Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE "clients"."cuit" = '24-25876543-7' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "clients" ("name", "surname", "birthdate", "dni", "cuit", "gender", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Maria"], ["surname", "Perez"], ["birthdate", "1983-06-16"], ["dni", 25876543], ["cuit", "24-25876543-7"], ["gender", "F"], ["created_at", "2015-12-21 20:33:50.163082"], ["updated_at", "2015-12-21 20:33:50.163082"]]
+  [1m[36m (169.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mClient Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE "clients"."dni" = 22345678 LIMIT 1[0m
+  [1m[35mClient Exists (0.9ms)[0m  SELECT  1 AS one FROM "clients" WHERE "clients"."cuit" = '23-22345678-4' LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "clients" ("name", "surname", "birthdate", "dni", "cuit", "gender", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sergio"], ["surname", "Gutierrez"], ["birthdate", "1974-10-30"], ["dni", 22345678], ["cuit", "23-22345678-4"], ["gender", "M"], ["created_at", "2015-12-21 20:33:50.352087"], ["updated_at", "2015-12-21 20:33:50.352087"]]
+  [1m[35m (169.3ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mClient Exists (0.7ms)[0m  SELECT  1 AS one FROM "clients" WHERE "clients"."dni" = 30876321 LIMIT 1
+  [1m[36mClient Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE "clients"."cuit" = '20-30876321-0' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "clients" ("name", "surname", "birthdate", "dni", "cuit", "gender", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Mario"], ["surname", "Martinez"], ["birthdate", "1986-08-09"], ["dni", 30876321], ["cuit", "20-30876321-0"], ["gender", "M"], ["created_at", "2015-12-21 20:33:50.542221"], ["updated_at", "2015-12-21 20:33:50.542221"]]
+  [1m[36m (145.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mClient Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE "clients"."dni" = 24778943 LIMIT 1[0m
+  [1m[35mClient Exists (0.5ms)[0m  SELECT  1 AS one FROM "clients" WHERE "clients"."cuit" = '27-24778943-8' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "clients" ("name", "surname", "birthdate", "dni", "cuit", "gender", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Juliana"], ["surname", "Lopez"], ["birthdate", "1979-04-24"], ["dni", 24778943], ["cuit", "27-24778943-8"], ["gender", "F"], ["created_at", "2015-12-21 20:33:50.710246"], ["updated_at", "2015-12-21 20:33:50.710246"]]
+  [1m[35m (147.3ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.5ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."cuit" = '24-16270743-9' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "people" ("name", "cuit", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Eduardo Casas"], ["cuit", "24-16270743-9"], ["created_at", "2015-12-21 20:33:50.932982"], ["updated_at", "2015-12-21 20:33:50.932982"]]
+  [1m[35m (127.5ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.7ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."cuit" = '30-17463843-2' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "people" ("name", "cuit", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "La Serenisima"], ["cuit", "30-17463843-2"], ["created_at", "2015-12-21 20:33:51.073252"], ["updated_at", "2015-12-21 20:33:51.073252"]]
+  [1m[35m (156.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.6ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."cuit" = '33-21734548-7' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "people" ("name", "cuit", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nestle"], ["cuit", "33-21734548-7"], ["created_at", "2015-12-21 20:33:51.240512"], ["updated_at", "2015-12-21 20:33:51.240512"]]
+  [1m[35m (123.0ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (1.6ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."cuit" = '20-16543769-5' LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "people" ("name", "cuit", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Armando Barreda"], ["cuit", "20-16543769-5"], ["created_at", "2015-12-21 20:33:51.377760"], ["updated_at", "2015-12-21 20:33:51.377760"]]
+  [1m[35m (117.2ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.7ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."cuit" = '23-25243746-1' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "people" ("name", "cuit", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Agustina Suarez"], ["cuit", "23-25243746-1"], ["created_at", "2015-12-21 20:33:51.509010"], ["updated_at", "2015-12-21 20:33:51.509010"]]
+  [1m[35m (124.2ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["kind", "E-Mail"], ["data", "jgonzalez@gmail.com"], ["client_id", 1], ["created_at", "2015-12-21 20:33:51.743166"], ["updated_at", "2015-12-21 20:33:51.743166"]]
+  [1m[36m (145.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "Teléfono"], ["data", "02214294753"], ["client_id", 5], ["created_at", "2015-12-21 20:33:51.902191"], ["updated_at", "2015-12-21 20:33:51.902191"]]
+  [1m[35m (140.7ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["kind", "Teléfono celular"], ["data", "155168184"], ["client_id", 3], ["created_at", "2015-12-21 20:33:52.057534"], ["updated_at", "2015-12-21 20:33:52.057534"]]
+  [1m[36m (144.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "Skype"], ["data", "joacogonzalez"], ["client_id", 1], ["created_at", "2015-12-21 20:33:52.213752"], ["updated_at", "2015-12-21 20:33:52.213752"]]
+  [1m[35m (145.8ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "bills" ("amount", "description", "date", "person_id", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["amount", 3000.0], ["description", "Materiales para construccion"], ["date", "2014-06-24"], ["person_id", 1], ["client_id", 1], ["created_at", "2015-12-21 20:33:52.459465"], ["updated_at", "2015-12-21 20:33:52.459465"]]
+  [1m[36m (132.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "bills" ("amount", "description", "date", "person_id", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["amount", 1202.45], ["description", "Insumos para aulas"], ["date", "2014-08-30"], ["person_id", 4], ["client_id", 1], ["created_at", "2015-12-21 20:33:52.606660"], ["updated_at", "2015-12-21 20:33:52.606660"]]
+  [1m[35m (152.1ms)[0m  commit transaction
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "bills" ("amount", "description", "date", "person_id", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["amount", 2400.0], ["description", "Cajas de carton"], ["date", "2015-05-19"], ["person_id", 3], ["client_id", 3], ["created_at", "2015-12-21 20:33:52.774169"], ["updated_at", "2015-12-21 20:33:52.774169"]]
+  [1m[36m (174.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "bills" ("amount", "description", "date", "person_id", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["amount", 3000.0], ["description", "Frascos de vidrio"], ["date", "2015-06-21"], ["person_id", 3], ["client_id", 2], ["created_at", "2015-12-21 20:33:52.963950"], ["updated_at", "2015-12-21 20:33:52.963950"]]
+  [1m[35m (131.9ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "bills" ("amount", "description", "date", "person_id", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["amount", 30000.0], ["description", "Container con juguetes y adornos de Navidad"], ["date", "2015-12-14"], ["person_id", 5], ["client_id", 5], ["created_at", "2015-12-21 20:33:53.109504"], ["updated_at", "2015-12-21 20:33:53.109504"]]
+  [1m[36m (143.2ms)[0m  [1mcommit transaction[0m
+  [1m[36mClient Load (8.6ms)[0m  [1mSELECT "clients".* FROM "clients"[0m
+  [1m[36mClient Load (9.3ms)[0m  [1mSELECT "clients".* FROM "clients"[0m
+  [1m[36mClient Load (7.9ms)[0m  [1mSELECT "clients".* FROM "clients"[0m

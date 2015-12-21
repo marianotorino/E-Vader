@@ -1,16 +1,22 @@
 require 'test_helper'
 
 class BillTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
-  setup do
-    @factura_invalida = bills(:invalida)
-    @factura_valida = bills(:valida)
+
+  test "Creacion de una factura vacia" do
+    assert_not Bill.new.save
   end
 
-  test "Creacion de facturas para un cliente" do
-    assert_not @factura_invalida.save
-    assert @factura_valida.save
+  test "Creacion de una factura incompleta" do
+    assert_not Bill.new(amount: 5000).save
+    assert_not Bill.new(description: "Una descripcion").save
+    assert_not Bill.new(date: "2013-11-15").save
+  end
+
+  test "Creacion de facturas con datos validos" do
+    assert bills(:valida).save
+  end
+
+  test "Creacion de facturas con datos invalidos" do
+    assert_not bills(:invalida).save
   end
 end
