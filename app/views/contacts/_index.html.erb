@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= contact_notice %></p>
 
-<h1>Medios de contacto de <%= @client.surname %></h1>
+<h2>Medios de contacto de <%= @client.surname %></h2>
 
 <table>
   <thead>
@@ -12,7 +12,7 @@
   </thead>
 
   <tbody>
-    <% @contacts.each do |contact| %>
+    <% @client.contacts.each do |contact| %>
       <tr>
         <td><%= contact.kind %></td>
         <td><%= contact.data %></td>
@@ -26,5 +26,4 @@
 
 <br>
 
-<%= link_to 'Nuevo Contacto', new_client_contact_path(@client) %> | 
-<%= link_to 'Volver', client_path(@client) %>
+<%= link_to 'Nuevo Contacto', new_client_contact_path(@client) %>

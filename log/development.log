@@ -4848,3 +4848,1927 @@ Completed 200 OK in 356ms (Views: 313.3ms | ActiveRecord: 4.9ms)
   [1m[36mClient Load (8.6ms)[0m  [1mSELECT "clients".* FROM "clients"[0m
   [1m[36mClient Load (9.3ms)[0m  [1mSELECT "clients".* FROM "clients"[0m
   [1m[36mClient Load (7.9ms)[0m  [1mSELECT "clients".* FROM "clients"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-04 18:39:43 -0300
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (24.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (166.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (110.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (3.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (268.9ms)
+  [1m[36m (145.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (130.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreatePeople (20151215184448)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "cuit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151215184448"]]
+  [1m[35m (136.9ms)[0m  commit transaction
+Migrating to CreateClients (20151215184823)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "surname" varchar, "dni" integer, "gender" varchar, "birthdate" date, "cuit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151215184823"]]
+  [1m[35m (133.0ms)[0m  commit transaction
+Migrating to CreateBills (20151215185011)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "bills" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "amount" float, "description" text, "date" date, "person_id" integer, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX "index_bills_on_person_id" ON "bills" ("person_id")[0m
+  [1m[35m (0.7ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bills_on_person_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bills_on_person_id' AND type='index'
+
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX "index_bills_on_client_id" ON "bills" ("client_id")[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151215185011"]]
+  [1m[36m (139.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateContacts (20151215185059)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "contacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "kind" varchar, "data" text, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX "index_contacts_on_client_id" ON "contacts" ("client_id")
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151215185059"]]
+  [1m[35m (140.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bills_on_client_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bills_on_client_id' AND type='index'
+
+  [1m[36m (0.5ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bills_on_person_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bills_on_person_id' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_contacts_on_client_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_contacts_on_client_id' AND type='index'
+
+  [1m[36m (139.0ms)[0m  [1mDROP TABLE "bills"[0m
+  [1m[35m (133.2ms)[0m  CREATE TABLE "bills" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "amount" float, "description" text, "date" date, "person_id" integer, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (132.6ms)[0m  CREATE  INDEX "index_bills_on_client_id" ON "bills" ("client_id")
+  [1m[36m (0.9ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bills_on_client_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bills_on_client_id' AND type='index'
+[0m
+  [1m[35m (140.8ms)[0m  CREATE  INDEX "index_bills_on_person_id" ON "bills" ("person_id")
+  [1m[36m (131.6ms)[0m  [1mDROP TABLE "clients"[0m
+  [1m[35m (133.3ms)[0m  CREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "surname" varchar, "dni" integer, "gender" varchar, "birthdate" date, "cuit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (132.0ms)[0m  [1mDROP TABLE "contacts"[0m
+  [1m[35m (122.2ms)[0m  CREATE TABLE "contacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "kind" varchar, "data" text, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (119.8ms)[0m  [1mCREATE  INDEX "index_contacts_on_client_id" ON "contacts" ("client_id")[0m
+  [1m[35m (131.7ms)[0m  DROP TABLE "people"
+  [1m[36m (133.3ms)[0m  [1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "cuit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (131.6ms)[0m  [1mCREATE TABLE "bills" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "amount" float, "description" text, "date" date, "person_id" integer, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (130.4ms)[0m  [1mCREATE  INDEX "index_bills_on_client_id" ON "bills" ("client_id")[0m
+  [1m[35m (0.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bills_on_client_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bills_on_client_id' AND type='index'
+
+  [1m[36m (140.7ms)[0m  [1mCREATE  INDEX "index_bills_on_person_id" ON "bills" ("person_id")[0m
+  [1m[35m (142.0ms)[0m  CREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "surname" varchar, "dni" integer, "gender" varchar, "birthdate" date, "cuit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (131.6ms)[0m  [1mCREATE TABLE "contacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "kind" varchar, "data" text, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (144.6ms)[0m  CREATE  INDEX "index_contacts_on_client_id" ON "contacts" ("client_id")
+  [1m[36m (142.6ms)[0m  [1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "cuit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (132.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (121.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.7ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (131.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151215185059')[0m
+  [1m[35m (133.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151215184448')
+  [1m[36m (133.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151215185011')[0m
+  [1m[35m (133.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151215184823')
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mClient Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE "clients"."dni" = 19354678 LIMIT 1[0m
+  [1m[35mClient Exists (0.4ms)[0m  SELECT  1 AS one FROM "clients" WHERE "clients"."cuit" = '20-19354678-9' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "clients" ("name", "surname", "birthdate", "dni", "cuit", "gender", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Joaquin"], ["surname", "Gonzalez"], ["birthdate", "1970-03-23"], ["dni", 19354678], ["cuit", "20-19354678-9"], ["gender", "M"], ["created_at", "2016-02-04 21:42:21.727760"], ["updated_at", "2016-02-04 21:42:21.727760"]]
+  [1m[35m (138.5ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mClient Exists (0.5ms)[0m  SELECT  1 AS one FROM "clients" WHERE "clients"."dni" = 25876543 LIMIT 1
+  [1m[36mClient Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE "clients"."cuit" = '24-25876543-7' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "clients" ("name", "surname", "birthdate", "dni", "cuit", "gender", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Maria"], ["surname", "Perez"], ["birthdate", "1983-06-16"], ["dni", 25876543], ["cuit", "24-25876543-7"], ["gender", "F"], ["created_at", "2016-02-04 21:42:21.882437"], ["updated_at", "2016-02-04 21:42:21.882437"]]
+  [1m[36m (130.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mClient Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE "clients"."dni" = 22345678 LIMIT 1[0m
+  [1m[35mClient Exists (0.4ms)[0m  SELECT  1 AS one FROM "clients" WHERE "clients"."cuit" = '23-22345678-4' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "clients" ("name", "surname", "birthdate", "dni", "cuit", "gender", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sergio"], ["surname", "Gutierrez"], ["birthdate", "1974-10-30"], ["dni", 22345678], ["cuit", "23-22345678-4"], ["gender", "M"], ["created_at", "2016-02-04 21:42:22.027635"], ["updated_at", "2016-02-04 21:42:22.027635"]]
+  [1m[35m (130.6ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mClient Exists (0.7ms)[0m  SELECT  1 AS one FROM "clients" WHERE "clients"."dni" = 30876321 LIMIT 1
+  [1m[36mClient Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE "clients"."cuit" = '20-30876321-0' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "clients" ("name", "surname", "birthdate", "dni", "cuit", "gender", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Mario"], ["surname", "Martinez"], ["birthdate", "1986-08-09"], ["dni", 30876321], ["cuit", "20-30876321-0"], ["gender", "M"], ["created_at", "2016-02-04 21:42:22.173288"], ["updated_at", "2016-02-04 21:42:22.173288"]]
+  [1m[36m (130.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mClient Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE "clients"."dni" = 24778943 LIMIT 1[0m
+  [1m[35mClient Exists (0.4ms)[0m  SELECT  1 AS one FROM "clients" WHERE "clients"."cuit" = '27-24778943-8' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "clients" ("name", "surname", "birthdate", "dni", "cuit", "gender", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Juliana"], ["surname", "Lopez"], ["birthdate", "1979-04-24"], ["dni", 24778943], ["cuit", "27-24778943-8"], ["gender", "F"], ["created_at", "2016-02-04 21:42:22.318295"], ["updated_at", "2016-02-04 21:42:22.318295"]]
+  [1m[35m (132.5ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.5ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."cuit" = '24-16270743-9' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "people" ("name", "cuit", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Eduardo Casas"], ["cuit", "24-16270743-9"], ["created_at", "2016-02-04 21:42:22.504409"], ["updated_at", "2016-02-04 21:42:22.504409"]]
+  [1m[35m (114.4ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.5ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."cuit" = '30-17463843-2' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "people" ("name", "cuit", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "La Serenisima"], ["cuit", "30-17463843-2"], ["created_at", "2016-02-04 21:42:22.629268"], ["updated_at", "2016-02-04 21:42:22.629268"]]
+  [1m[35m (135.9ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.7ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."cuit" = '33-21734548-7' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "people" ("name", "cuit", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nestle"], ["cuit", "33-21734548-7"], ["created_at", "2016-02-04 21:42:22.775027"], ["updated_at", "2016-02-04 21:42:22.775027"]]
+  [1m[35m (123.5ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.5ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."cuit" = '20-16543769-5' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "people" ("name", "cuit", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Armando Barreda"], ["cuit", "20-16543769-5"], ["created_at", "2016-02-04 21:42:22.908523"], ["updated_at", "2016-02-04 21:42:22.908523"]]
+  [1m[35m (124.9ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.5ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."cuit" = '23-25243746-1' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "people" ("name", "cuit", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Agustina Suarez"], ["cuit", "23-25243746-1"], ["created_at", "2016-02-04 21:42:23.042721"], ["updated_at", "2016-02-04 21:42:23.042721"]]
+  [1m[35m (125.1ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["kind", "E-Mail"], ["data", "jgonzalez@gmail.com"], ["client_id", 1], ["created_at", "2016-02-04 21:42:23.267289"], ["updated_at", "2016-02-04 21:42:23.267289"]]
+  [1m[36m (133.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "Teléfono"], ["data", "02214294753"], ["client_id", 5], ["created_at", "2016-02-04 21:42:23.411460"], ["updated_at", "2016-02-04 21:42:23.411460"]]
+  [1m[35m (135.5ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["kind", "Teléfono celular"], ["data", "155168184"], ["client_id", 3], ["created_at", "2016-02-04 21:42:23.555861"], ["updated_at", "2016-02-04 21:42:23.555861"]]
+  [1m[36m (136.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "Skype"], ["data", "joacogonzalez"], ["client_id", 1], ["created_at", "2016-02-04 21:42:23.701601"], ["updated_at", "2016-02-04 21:42:23.701601"]]
+  [1m[35m (134.3ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "bills" ("amount", "description", "date", "person_id", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["amount", 3000.0], ["description", "Materiales para construccion"], ["date", "2014-06-24"], ["person_id", 1], ["client_id", 1], ["created_at", "2016-02-04 21:42:23.904858"], ["updated_at", "2016-02-04 21:42:23.904858"]]
+  [1m[36m (132.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "bills" ("amount", "description", "date", "person_id", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["amount", 1202.45], ["description", "Insumos para aulas"], ["date", "2014-08-30"], ["person_id", 4], ["client_id", 1], ["created_at", "2016-02-04 21:42:24.048143"], ["updated_at", "2016-02-04 21:42:24.048143"]]
+  [1m[35m (135.2ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "bills" ("amount", "description", "date", "person_id", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["amount", 2400.0], ["description", "Cajas de carton"], ["date", "2015-05-19"], ["person_id", 3], ["client_id", 3], ["created_at", "2016-02-04 21:42:24.193576"], ["updated_at", "2016-02-04 21:42:24.193576"]]
+  [1m[36m (135.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "bills" ("amount", "description", "date", "person_id", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["amount", 3000.0], ["description", "Frascos de vidrio"], ["date", "2015-06-21"], ["person_id", 3], ["client_id", 2], ["created_at", "2016-02-04 21:42:24.338906"], ["updated_at", "2016-02-04 21:42:24.338906"]]
+  [1m[35m (125.8ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "bills" ("amount", "description", "date", "person_id", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["amount", 30000.0], ["description", "Container con juguetes y adornos de Navidad"], ["date", "2015-12-14"], ["person_id", 5], ["client_id", 5], ["created_at", "2016-02-04 21:42:24.474713"], ["updated_at", "2016-02-04 21:42:24.474713"]]
+  [1m[36m (113.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-04 18:42:30 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 1458ms (Views: 1398.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bills.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-04 18:42:32 -0300
+
+
+Started GET "/assets/clients.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-04 18:42:32 -0300
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-04 18:42:32 -0300
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-04 18:42:32 -0300
+
+
+Started GET "/assets/scaffolds.self-3a969dd78e1062d361cf98279510766dae0340d7bd86dc03acb05522fd9a6487.css?body=1" for 127.0.0.1 at 2016-02-04 18:42:32 -0300
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-02-04 18:42:32 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-02-04 18:42:32 -0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-02-04 18:42:32 -0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-02-04 18:42:32 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-02-04 18:42:32 -0300
+
+
+Started GET "/assets/clients.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-04 18:42:32 -0300
+
+
+Started GET "/assets/bills.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-04 18:42:32 -0300
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-04 18:42:32 -0300
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-04 18:42:32 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-02-04 18:42:32 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-02-04 18:42:33 -0300
+
+
+Started GET "/clients" for 127.0.0.1 at 2016-02-04 18:42:36 -0300
+Processing by ClientsController#index as HTML
+  [1m[35mClient Load (0.8ms)[0m  SELECT "clients".* FROM "clients"
+  Rendered clients/index.html.erb within layouts/application (51.5ms)
+Completed 200 OK in 342ms (Views: 310.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 18:42:42 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.7ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.9ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (1.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered clients/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 607ms (Views: 290.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/clients/1/contacts" for 127.0.0.1 at 2016-02-04 18:42:45 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"1"}
+  [1m[36mClient Load (1.0ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mContact Load (0.7ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?  [["client_id", 1]]
+  Rendered contacts/index.html.erb within layouts/application (47.1ms)
+Completed 200 OK in 480ms (Views: 452.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 18:42:52 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.4ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered clients/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 344ms (Views: 324.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 18:49:28 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.7ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (1.9ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered clients/show.html.erb within layouts/application (21.2ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 3.5ms)
+
+ActionView::Template::Error (Missing partial contact/_index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ramiro/Git/E-Vader/app/views"
+):
+    40:   <%= @client.cuit %>
+    41: </p>
+    42: 
+    43: <%= render 'contact/index' %>
+    44: 
+    45: <h2>Facturación por año:</h2>
+    46: 
+  app/views/clients/show.html.erb:43:in `_app_views_clients_show_html_erb__475819485__636782408'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (46.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (17.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (151.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (89.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (187.7ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 18:50:47 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.6ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered clients/show.html.erb within layouts/application (12.7ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 2.0ms)
+
+ActionView::Template::Error (Missing partial contact/_index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ramiro/Git/E-Vader/app/views"
+):
+    40:   <%= @client.cuit %>
+    41: </p>
+    42: 
+    43: <%= render 'contact/index' %>
+    44: 
+    45: <h2>Facturación por año:</h2>
+    46: 
+  app/views/clients/show.html.erb:43:in `_app_views_clients_show_html_erb__475819485__636782408'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (53.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (153.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (88.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (187.7ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 18:52:02 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.5ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered contacts/_index.html.erb (14.1ms)
+  Rendered clients/show.html.erb within layouts/application (26.0ms)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 2.3ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @contacts.each do |contact| %>
+    16:       <tr>
+    17:         <td><%= contact.kind %></td>
+    18:         <td><%= contact.data %></td>
+  app/views/contacts/_index.html.erb:15:in `_app_views_contacts__index_html_erb___371753138__632411818'
+  app/views/clients/show.html.erb:43:in `_app_views_clients_show_html_erb__475819485__631879518'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (71.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (17.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (170.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (93.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (187.4ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 18:54:21 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.6ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mContact Load (0.6ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (18.3ms)
+  Rendered clients/show.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 333ms (Views: 314.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/clients/1/contacts/new" for 127.0.0.1 at 2016-02-04 18:54:31 -0300
+Processing by ContactsController#new as HTML
+  Parameters: {"client_id"=>"1"}
+  [1m[35mClient Load (0.6ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contacts/_form.html.erb (164.1ms)
+  Rendered contacts/new.html.erb within layouts/application (169.7ms)
+Completed 200 OK in 459ms (Views: 452.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/clients/1/contacts" for 127.0.0.1 at 2016-02-04 18:54:45 -0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N5eBtIR+GdZs/HOddYqXDFxRHP4Ep0KYce41WsGKDqMkfzQ+ybnqzLXcYDTudF+tTNq888P+gguQazkLlV64aQ==", "contact"=>{"kind"=>"Celular", "data"=>"15427432"}, "commit"=>"Create Contact", "client_id"=>"1"}
+  [1m[36mClient Load (0.7ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "Celular"], ["data", "15427432"], ["client_id", 1], ["created_at", "2016-02-04 21:54:45.918679"], ["updated_at", "2016-02-04 21:54:45.918679"]]
+  [1m[35m (134.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/clients/1/contacts/5
+Completed 302 Found in 159ms (ActiveRecord: 137.1ms)
+
+
+Started GET "/clients/1/contacts/5" for 127.0.0.1 at 2016-02-04 18:54:46 -0300
+Processing by ContactsController#show as HTML
+  Parameters: {"client_id"=>"1", "id"=>"5"}
+  [1m[36mContact Load (0.9ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mClient Load (0.6ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contacts/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 317ms (Views: 306.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/clients/1/contacts" for 127.0.0.1 at 2016-02-04 18:54:50 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"1"}
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
+
+ActionView::MissingTemplate (Missing template contacts/index, application/index with {:locale=>[:en], :formats=>[:html, :xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ramiro/Git/E-Vader/app/views"
+):
+  actionview (4.2.5) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.5) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.5) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.5) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.5) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.5) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.5) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (44.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (19.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (150.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (97.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (198.5ms)
+
+
+Started GET "/clients/1/contacts" for 127.0.0.1 at 2016-02-04 18:54:51 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"1"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.5ms)
+
+ActionView::MissingTemplate (Missing template contacts/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ramiro/Git/E-Vader/app/views"
+):
+  actionview (4.2.5) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.5) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.5) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.5) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.5) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.5) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.5) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (44.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (19.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (146.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (96.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (223.5ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 18:55:42 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (2.1ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.6ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mContact Load (0.4ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (21.2ms)
+  Rendered clients/show.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 347ms (Views: 321.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/clients/1/contacts/5/edit" for 127.0.0.1 at 2016-02-04 18:55:48 -0300
+Processing by ContactsController#edit as HTML
+  Parameters: {"client_id"=>"1", "id"=>"5"}
+  [1m[35mContact Load (0.4ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered contacts/_form.html.erb (7.8ms)
+  Rendered contacts/edit.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 301ms (Views: 294.6ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/clients/1/contacts/5" for 127.0.0.1 at 2016-02-04 18:55:59 -0300
+Processing by ContactsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SUuy4D43dSyH3zo1MoNrrpszvVivsk36NwJwiHUv515aowdqc/CGNl7/KZypfaMPi7gdVWjrjWnWh3zZIftRlA==", "contact"=>{"kind"=>"Celular", "data"=>"1542743333"}, "commit"=>"Update Contact", "client_id"=>"1", "id"=>"5"}
+  [1m[35mContact Load (0.5ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (1.0ms)[0m  UPDATE "contacts" SET "data" = ?, "updated_at" = ? WHERE "contacts"."id" = ?  [["data", "1542743333"], ["updated_at", "2016-02-04 21:55:59.032860"], ["id", 5]]
+  [1m[36m (135.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/clients/1/contacts/5
+Completed 302 Found in 167ms (ActiveRecord: 138.5ms)
+
+
+Started GET "/clients/1/contacts/5" for 127.0.0.1 at 2016-02-04 18:55:59 -0300
+Processing by ContactsController#show as HTML
+  Parameters: {"client_id"=>"1", "id"=>"5"}
+  [1m[35mContact Load (0.5ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered contacts/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 297ms (Views: 289.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 18:56:03 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBill Load (0.9ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?[0m  [["client_id", 1]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mContact Load (0.5ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (11.6ms)
+  Rendered clients/show.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 317ms (Views: 300.3ms | ActiveRecord: 2.6ms)
+
+
+Started DELETE "/clients/1/contacts/5" for 127.0.0.1 at 2016-02-04 18:56:11 -0300
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0SAvbKifyR44DRwoOKRZvBUZx4XwYCBQosyIvdVT0KnCyJrm5Vg6BOEtD4GjWpEdBZJniDc54MNDSYTsgYdmYw==", "client_id"=>"1", "id"=>"5"}
+  [1m[36mContact Load (0.4ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mClient Load (0.6ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "contacts" WHERE "contacts"."id" = ?  [["id", 5]]
+  [1m[36m (151.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/clients/1/contacts
+Completed 302 Found in 165ms (ActiveRecord: 153.7ms)
+
+
+Started GET "/clients/1/contacts" for 127.0.0.1 at 2016-02-04 18:56:11 -0300
+Processing by ContactsController#index as HTML
+  Parameters: {"client_id"=>"1"}
+  [1m[35mClient Load (0.6ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms)
+
+ActionView::MissingTemplate (Missing template contacts/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ramiro/Git/E-Vader/app/views"
+):
+  actionview (4.2.5) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.5) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.5) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.5) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.5) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.5) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.5) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (39.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (141.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (87.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (182.4ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:00:23 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (1.0ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.8ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mContact Load (0.9ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (57.3ms)
+  Rendered clients/show.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 576ms (Views: 374.2ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:02:15 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mClient Load (0.6ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBill Load (0.8ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?[0m  [["client_id", 1]]
+  [1m[35mPerson Load (0.7ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered contacts/_index.html.erb (78.0ms)
+  Rendered clients/show.html.erb within layouts/application (83.1ms)
+Completed 500 Internal Server Error in 257ms (ActiveRecord: 7.7ms)
+
+ActionView::Template::Error (undefined local variable or method `contact_notice' for #<#<Class:0xb4ac5990>:0xb49b6aa4>):
+    1: <p id="contact_notice"><%= contact_notice %></p>
+    2: 
+    3: <h2>Medios de contacto de <%= @client.surname %></h2>
+    4: 
+  app/views/contacts/_index.html.erb:1:in `_app_views_contacts__index_html_erb___371753138__631898898'
+  app/views/clients/show.html.erb:43:in `_app_views_clients_show_html_erb__475819485__631879518'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (50.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (154.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (88.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (188.9ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:05:38 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBill Load (0.5ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?[0m  [["client_id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mContact Load (0.7ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (60.5ms)
+  Rendered clients/show.html.erb within layouts/application (75.8ms)
+Completed 200 OK in 394ms (Views: 358.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/clients/1/contacts/1/edit" for 127.0.0.1 at 2016-02-04 19:05:48 -0300
+Processing by ContactsController#edit as HTML
+  Parameters: {"client_id"=>"1", "id"=>"1"}
+  [1m[36mContact Load (0.9ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.3ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contacts/_form.html.erb (13.3ms)
+  Rendered contacts/edit.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 308ms (Views: 298.0ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/clients/1/contacts/1" for 127.0.0.1 at 2016-02-04 19:05:55 -0300
+Processing by ContactsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KdNebWt3IHuu0Uyhv/WNMH1oe1WQ4y3EzetB6dvE/b46O+vnJrDTYXfxXwgkC0WRbePbWFe67Vcsbk24jxBLdA==", "contact"=>{"kind"=>"E-Mail", "data"=>"jgonzalez@hotmail.com"}, "commit"=>"Update Contact", "client_id"=>"1", "id"=>"1"}
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "contacts" SET "data" = ?, "updated_at" = ? WHERE "contacts"."id" = ?[0m  [["data", "jgonzalez@hotmail.com"], ["updated_at", "2016-02-04 22:05:55.866381"], ["id", 1]]
+  [1m[35m (122.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/clients/1/contacts/1
+Completed 302 Found in 154ms (ActiveRecord: 125.1ms)
+
+
+Started GET "/clients/1/contacts/1" for 127.0.0.1 at 2016-02-04 19:05:56 -0300
+Processing by ContactsController#show as HTML
+  Parameters: {"client_id"=>"1", "id"=>"1"}
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contacts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 346ms (Views: 338.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:06:01 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.6ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (10.3ms)
+  Rendered clients/show.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 305ms (Views: 288.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/clients/1/contacts/new" for 127.0.0.1 at 2016-02-04 19:06:06 -0300
+Processing by ContactsController#new as HTML
+  Parameters: {"client_id"=>"1"}
+  [1m[35mClient Load (0.4ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contacts/_form.html.erb (7.4ms)
+  Rendered contacts/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 297ms (Views: 292.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/clients/1/contacts" for 127.0.0.1 at 2016-02-04 19:06:15 -0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gwNzxjRLcZQjzJhCJE1KsICRpi/yKOqQBSePHolo2LSQ68ZMeYyCjvrsi+u/s4IRkBoGIjVxKgPkooNP3bxufg==", "contact"=>{"kind"=>"Celular", "data"=>"134234423"}, "commit"=>"Create Contact", "client_id"=>"1"}
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.8ms)[0m  begin transaction
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "Celular"], ["data", "134234423"], ["client_id", 1], ["created_at", "2016-02-04 22:06:15.105872"], ["updated_at", "2016-02-04 22:06:15.105872"]]
+  [1m[35m (143.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/clients/1/contacts/6
+Completed 302 Found in 172ms (ActiveRecord: 146.5ms)
+
+
+Started GET "/clients/1/contacts/6" for 127.0.0.1 at 2016-02-04 19:06:15 -0300
+Processing by ContactsController#show as HTML
+  Parameters: {"client_id"=>"1", "id"=>"6"}
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contacts/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 391ms (Views: 382.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:06:21 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.6ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mContact Load (0.6ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (8.8ms)
+  Rendered clients/show.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 298ms (Views: 282.0ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/clients/1/contacts/6" for 127.0.0.1 at 2016-02-04 19:06:29 -0300
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"g8LfSw017fecYGb9NCP1JRWwUE4YM0R/xD1vzRhXGrSQKmrBQPIe7UVAdVSv3T2EBTvwQ99qhOwluGOcTIOsfg==", "client_id"=>"1", "id"=>"6"}
+  [1m[35mContact Load (0.5ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "contacts" WHERE "contacts"."id" = ?[0m  [["id", 6]]
+  [1m[35m (143.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 166ms (ActiveRecord: 146.1ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:06:30 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.4ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mContact Load (0.4ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (7.8ms)
+  Rendered clients/show.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 321ms (Views: 305.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:19:57 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mClient Load (0.8ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBill Load (1.0ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?[0m  [["client_id", 1]]
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mContact Load (0.7ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (57.2ms)
+  Rendered clients/show.html.erb within layouts/application (63.6ms)
+Completed 200 OK in 560ms (Views: 392.8ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/clients/1/contacts/new" for 127.0.0.1 at 2016-02-04 19:20:03 -0300
+Processing by ContactsController#new as HTML
+  Parameters: {"client_id"=>"1"}
+  [1m[36mClient Load (1.6ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered contacts/_form.html.erb (16.0ms)
+  Rendered contacts/new.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 376ms (Views: 366.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/clients/1/contacts" for 127.0.0.1 at 2016-02-04 19:20:11 -0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cKdRLYE5oI8Kdwc+j3VaNXuXvTo2eQhuCJx9c/fjCrBjT+SnzP5TldNXFJcUi5KUaxwdN/EgyP3pGXEioze8eg==", "contact"=>{"kind"=>"Celular", "data"=>"423424"}, "commit"=>"Create Contact", "client_id"=>"1"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["kind", "Celular"], ["data", "423424"], ["client_id", 1], ["created_at", "2016-02-04 22:20:11.798584"], ["updated_at", "2016-02-04 22:20:11.798584"]]
+  [1m[36m (143.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/clients/1/contacts/7
+Completed 302 Found in 168ms (ActiveRecord: 145.7ms)
+
+
+Started GET "/clients/1/contacts/7" for 127.0.0.1 at 2016-02-04 19:20:11 -0300
+Processing by ContactsController#show as HTML
+  Parameters: {"client_id"=>"1", "id"=>"7"}
+  [1m[35mContact Load (1.1ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered contacts/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 348ms (Views: 337.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:20:16 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBill Load (0.6ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?[0m  [["client_id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (13.8ms)
+  Rendered clients/show.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 388ms (Views: 371.7ms | ActiveRecord: 2.6ms)
+
+
+Started DELETE "/clients/1/contacts/7" for 127.0.0.1 at 2016-02-04 19:20:23 -0300
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"froxEz6Jafn4C96AoQcrOrSCCipgdw84VWjXyewUC9NtUoSZc06a4yErzSk6+eObpAmqJ6cuz6u07duYuMC9GQ==", "client_id"=>"1", "id"=>"7"}
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mClient Load (0.6ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "contacts" WHERE "contacts"."id" = ?  [["id", 7]]
+  [1m[36m (146.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 164ms (ActiveRecord: 149.4ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:20:24 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBill Load (0.6ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?[0m  [["client_id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mContact Load (0.7ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (11.5ms)
+  Rendered clients/show.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 389ms (Views: 367.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/clients/1/contacts/new" for 127.0.0.1 at 2016-02-04 19:20:37 -0300
+Processing by ContactsController#new as HTML
+  Parameters: {"client_id"=>"1"}
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered contacts/_form.html.erb (9.0ms)
+  Rendered contacts/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 284ms (Views: 279.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/clients/1/contacts" for 127.0.0.1 at 2016-02-04 19:20:46 -0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TZHrkoOKzUXxW/S29PyeoFGHn5BPmWwYYv1mvM7P+dZeeV4Yzk0+Xyh75x9vAlYBQQw/nYjArIuDeGrtmhtPHA==", "contact"=>{"kind"=>"Cel", "data"=>"3423434"}, "commit"=>"Create Contact", "client_id"=>"1"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["kind", "Cel"], ["data", "3423434"], ["client_id", 1], ["created_at", "2016-02-04 22:20:46.421396"], ["updated_at", "2016-02-04 22:20:46.421396"]]
+  [1m[36m (130.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/clients/1/contacts/8
+Completed 302 Found in 154ms (ActiveRecord: 132.6ms)
+
+
+Started GET "/clients/1/contacts/8" for 127.0.0.1 at 2016-02-04 19:20:46 -0300
+Processing by ContactsController#show as HTML
+  Parameters: {"client_id"=>"1", "id"=>"8"}
+  [1m[35mContact Load (0.4ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered contacts/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 379ms (Views: 372.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:21:15 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBill Load (0.4ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?[0m  [["client_id", 1]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered contacts/_index.html.erb (100.7ms)
+  Rendered clients/show.html.erb within layouts/application (105.9ms)
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 1.6ms)
+
+ActionView::Template::Error (undefined local variable or method `contact_notice' for #<#<Class:0xbbb34ba4>:0xba661970>):
+    1: <p id="contact_notice"><%= contact_notice %></p>
+    2: 
+    3: <h2>Medios de contacto de <%= @client.surname %></h2>
+    4: 
+  app/views/contacts/_index.html.erb:1:in `_app_views_contacts__index_html_erb___371753138__588288328'
+  app/views/clients/show.html.erb:43:in `_app_views_clients_show_html_erb__475819485__573420618'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (52.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (162.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (86.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (181.0ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:21:17 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBill Load (0.6ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?[0m  [["client_id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered contacts/_index.html.erb (80.0ms)
+  Rendered clients/show.html.erb within layouts/application (86.0ms)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 2.1ms)
+
+ActionView::Template::Error (undefined local variable or method `contact_notice' for #<#<Class:0xbbb34ba4>:0xbb9d74f0>):
+    1: <p id="contact_notice"><%= contact_notice %></p>
+    2: 
+    3: <h2>Medios de contacto de <%= @client.surname %></h2>
+    4: 
+  app/views/contacts/_index.html.erb:1:in `_app_views_contacts__index_html_erb___371753138__573735108'
+  app/views/clients/show.html.erb:43:in `_app_views_clients_show_html_erb__475819485__631879518'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (53.7ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (156.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (102.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (205.5ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:27:14 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mClient Load (1.4ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBill Load (0.7ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?[0m  [["client_id", 1]]
+  [1m[35mPerson Load (0.9ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mContact Load (1.0ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (55.1ms)
+  Rendered clients/show.html.erb within layouts/application (61.2ms)
+Completed 200 OK in 544ms (Views: 344.4ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/clients/1/contacts/8" for 127.0.0.1 at 2016-02-04 19:27:23 -0300
+Processing by ContactsController#show as HTML
+  Parameters: {"client_id"=>"1", "id"=>"8"}
+  [1m[36mContact Load (0.7ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mClient Load (0.3ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contacts/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 288ms (Views: 279.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/clients/1/contacts/8/edit" for 127.0.0.1 at 2016-02-04 19:27:26 -0300
+Processing by ContactsController#edit as HTML
+  Parameters: {"client_id"=>"1", "id"=>"8"}
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mClient Load (0.6ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contacts/_form.html.erb (13.2ms)
+  Rendered contacts/edit.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 340ms (Views: 332.2ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/clients/1/contacts/8" for 127.0.0.1 at 2016-02-04 19:27:32 -0300
+Processing by ContactsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WhZeW2y8PqooPIj+ooyn+o8zW5JKA+Et12PHFPqmZ0pJ/uvRIXvNsPEcm1c5cm9bn7j7n41aIb425stFrnLRgA==", "contact"=>{"kind"=>"Cel", "data"=>"3423434666"}, "commit"=>"Update Contact", "client_id"=>"1", "id"=>"8"}
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mClient Load (0.8ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mClient Load (0.8ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "contacts" SET "data" = ?, "updated_at" = ? WHERE "contacts"."id" = ?[0m  [["data", "3423434666"], ["updated_at", "2016-02-04 22:27:32.205232"], ["id", 8]]
+  [1m[35m (146.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/clients/1/contacts/8
+Completed 302 Found in 178ms (ActiveRecord: 150.4ms)
+
+
+Started GET "/clients/1/contacts/8" for 127.0.0.1 at 2016-02-04 19:27:32 -0300
+Processing by ContactsController#show as HTML
+  Parameters: {"client_id"=>"1", "id"=>"8"}
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contacts/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 293ms (Views: 285.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:27:35 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.8ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.5ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mContact Load (0.4ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (8.7ms)
+  Rendered clients/show.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 324ms (Views: 304.3ms | ActiveRecord: 2.7ms)
+
+
+Started DELETE "/clients/1/contacts/8" for 127.0.0.1 at 2016-02-04 19:27:43 -0300
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xBkk0NCb3OtqrjZXXRSR2QXAhZxjUacKrdxLDTFNqe/X8ZFanVwv8bOOJf7G6ll4FUslkaQIZ5lMWUdcZZkfJQ==", "client_id"=>"1", "id"=>"8"}
+  [1m[35mContact Load (0.5ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "contacts" WHERE "contacts"."id" = ?[0m  [["id", 8]]
+  [1m[35m (134.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 150ms (ActiveRecord: 137.1ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:27:43 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.6ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mContact Load (0.4ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (9.0ms)
+  Rendered clients/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 335ms (Views: 312.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/clients/1/edit" for 127.0.0.1 at 2016-02-04 19:27:55 -0300
+Processing by ClientsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered clients/_form.html.erb (62.2ms)
+  Rendered clients/edit.html.erb within layouts/application (74.2ms)
+Completed 200 OK in 368ms (Views: 363.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/clients/1" for 127.0.0.1 at 2016-02-04 19:28:10 -0300
+Processing by ClientsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"30x3RAik7iV7wotPJ64E30xzeWyyRn/y29q5P21H58/MpMLORWMdP6LimOa8UMx+XPjZYXUfv2E6X7VuOZNRBQ==", "client"=>{"name"=>"Joaquin", "surname"=>"Gonzalez", "dni"=>"193546786", "gender"=>"M", "birthdate(1i)"=>"1970", "birthdate(2i)"=>"3", "birthdate(3i)"=>"23", "cuit"=>"20-19354678-9"}, "commit"=>"Update Client", "id"=>"1"}
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mClient Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE ("clients"."dni" = 193546786 AND "clients"."id" != 1) LIMIT 1[0m
+  [1m[35mClient Exists (0.4ms)[0m  SELECT  1 AS one FROM "clients" WHERE ("clients"."cuit" = '20-19354678-9' AND "clients"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "clients" SET "dni" = ?, "updated_at" = ? WHERE "clients"."id" = ?[0m  [["dni", 193546786], ["updated_at", "2016-02-04 22:28:10.949746"], ["id", 1]]
+  [1m[35m (127.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 208ms (ActiveRecord: 129.9ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:28:11 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.4ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mContact Load (0.4ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (12.4ms)
+  Rendered clients/show.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 334ms (Views: 318.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/clients/1/contacts/new" for 127.0.0.1 at 2016-02-04 19:29:51 -0300
+Processing by ContactsController#new as HTML
+  Parameters: {"client_id"=>"1"}
+  [1m[35mClient Load (0.8ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contacts/_form.html.erb (13.3ms)
+  Rendered contacts/new.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 532ms (Views: 416.6ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/clients/1/contacts" for 127.0.0.1 at 2016-02-04 19:30:00 -0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cYxoLmBlZZnmmeP4ch9rjEtImKScrdS6MFTDUWiBKTxiZN2kLaKWgz+58FHp4aMtW8M4qVv0FCnR0c8APFWf9g==", "contact"=>{"kind"=>"Celu", "data"=>"45453534"}, "commit"=>"Create Contact", "client_id"=>"1"}
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "Celu"], ["data", "45453534"], ["client_id", 1], ["created_at", "2016-02-04 22:30:00.246022"], ["updated_at", "2016-02-04 22:30:00.246022"]]
+  [1m[35m (140.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/clients/1/contacts/9
+Completed 302 Found in 185ms (ActiveRecord: 143.4ms)
+
+
+Started GET "/clients/1/contacts/9" for 127.0.0.1 at 2016-02-04 19:30:00 -0300
+Processing by ContactsController#show as HTML
+  Parameters: {"client_id"=>"1", "id"=>"9"}
+  [1m[36mContact Load (1.7ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contacts/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 413ms (Views: 401.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:30:04 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.7ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (3.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mContact Load (0.7ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (12.9ms)
+  Rendered clients/show.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 503ms (Views: 381.0ms | ActiveRecord: 8.2ms)
+
+
+Started DELETE "/clients/1/contacts/9" for 127.0.0.1 at 2016-02-04 19:30:12 -0300
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RtCe66ZKWdPOMIhV/dv6dPgWV4EU3jpI98DowZ5v+qpVOCth642qyRcQm/xmJTLV6J33jNOH+tsWReSQyrtMYA==", "client_id"=>"1", "id"=>"9"}
+  [1m[35mContact Load (0.5ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "contacts" WHERE "contacts"."id" = ?[0m  [["id", 9]]
+  [1m[35m (144.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 159ms (ActiveRecord: 147.2ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:30:12 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.5ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mContact Load (0.4ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (8.3ms)
+  Rendered clients/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 324ms (Views: 308.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/clients/1/contacts/new" for 127.0.0.1 at 2016-02-04 19:32:22 -0300
+Processing by ContactsController#new as HTML
+  Parameters: {"client_id"=>"1"}
+  [1m[35mClient Load (0.4ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contacts/_form.html.erb (10.2ms)
+  Rendered contacts/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 332ms (Views: 326.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/clients/1/contacts" for 127.0.0.1 at 2016-02-04 19:32:30 -0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"87YM+pHGla713L0WFFz72BBH+lkzHc/rD7qOlDfJTB/gXrlw3AFmtCz8rr+PojN5AMxaVPRED3juP4LFYx361Q==", "contact"=>{"kind"=>"Celu", "data"=>"23452344"}, "commit"=>"Create Contact", "client_id"=>"1"}
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (17.0ms)[0m  [1mINSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "Celu"], ["data", "23452344"], ["client_id", 1], ["created_at", "2016-02-04 22:32:30.479771"], ["updated_at", "2016-02-04 22:32:30.479771"]]
+  [1m[35m (135.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/clients/1/contacts/10
+Completed 302 Found in 170ms (ActiveRecord: 153.5ms)
+
+
+Started GET "/clients/1/contacts/10" for 127.0.0.1 at 2016-02-04 19:32:30 -0300
+Processing by ContactsController#show as HTML
+  Parameters: {"client_id"=>"1", "id"=>"10"}
+  [1m[36mContact Load (0.4ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mClient Load (0.3ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contacts/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 307ms (Views: 300.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:32:33 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.6ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (12.5ms)
+  Rendered clients/show.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 334ms (Views: 316.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/clients/1/contacts/new" for 127.0.0.1 at 2016-02-04 19:32:38 -0300
+Processing by ContactsController#new as HTML
+  Parameters: {"client_id"=>"1"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contacts/_form.html.erb (9.7ms)
+  Rendered contacts/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 284ms (Views: 278.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/clients/1/contacts" for 127.0.0.1 at 2016-02-04 19:32:48 -0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XdUHfK/6DmH5jlbuyOLz85t9JrHODBcSoAelEq2VxOhOPbL24j39eyCuRUdTHDtSi/aGvAlV14FBgqlD+UFyIg==", "contact"=>{"kind"=>"Celu 2", "data"=>"1434324"}, "commit"=>"Create Contact", "client_id"=>"1"}
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "Celu 2"], ["data", "1434324"], ["client_id", 1], ["created_at", "2016-02-04 22:32:48.233645"], ["updated_at", "2016-02-04 22:32:48.233645"]]
+  [1m[35m (144.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/clients/1/contacts/11
+Completed 302 Found in 170ms (ActiveRecord: 146.9ms)
+
+
+Started GET "/clients/1/contacts/11" for 127.0.0.1 at 2016-02-04 19:32:48 -0300
+Processing by ContactsController#show as HTML
+  Parameters: {"client_id"=>"1", "id"=>"11"}
+  [1m[36mContact Load (0.8ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contacts/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 353ms (Views: 345.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:32:50 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.7ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (10.3ms)
+  Rendered clients/show.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 302ms (Views: 286.1ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/clients/1/contacts/11" for 127.0.0.1 at 2016-02-04 19:32:56 -0300
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jyYRdujI8fNfkrNmGNWIyyiETG7L3FwKmTVC1IboLl+czqT8pQ8C6YayoM+DK0BqOA/sYwyFnJl4sE6F0jyYlQ==", "client_id"=>"1", "id"=>"11"}
+  [1m[35mContact Load (0.5ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "contacts" WHERE "contacts"."id" = ?[0m  [["id", 11]]
+  [1m[35m (137.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 167ms (ActiveRecord: 140.1ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:32:56 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.6ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mContact Load (0.6ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (45.2ms)
+  Rendered clients/show.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 358ms (Views: 337.7ms | ActiveRecord: 2.7ms)
+
+
+Started DELETE "/clients/1/contacts/10" for 127.0.0.1 at 2016-02-04 19:33:45 -0300
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SVciHgaq659WqccD3a8Wu/mMI8NyUKH510WITFrXHoNav5eUS20YhY+J1KpGUd4a6QeDzrUJYWo2wIQdDgOoSQ==", "client_id"=>"1", "id"=>"10"}
+  [1m[35mContact Load (0.5ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "contacts" WHERE "contacts"."id" = ?[0m  [["id", 10]]
+  [1m[35m (148.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 170ms (ActiveRecord: 150.9ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:33:45 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.7ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (1.1ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mContact Load (0.6ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (14.7ms)
+  Rendered clients/show.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 348ms (Views: 327.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/clients/1/contacts/new" for 127.0.0.1 at 2016-02-04 19:33:48 -0300
+Processing by ContactsController#new as HTML
+  Parameters: {"client_id"=>"1"}
+  [1m[35mClient Load (0.7ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contacts/_form.html.erb (10.6ms)
+  Rendered contacts/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 333ms (Views: 325.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/clients/1/contacts" for 127.0.0.1 at 2016-02-04 19:33:55 -0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lPSzbqdR9PAEpVN9Hv0/2vCDByHXVP1k0+2fvbftUvSHHAbk6pYH6t2FQNSFA/d74AinLBANPfcyaJPs4znkPg==", "contact"=>{"kind"=>"Cel", "data"=>"34234234"}, "commit"=>"Create Contact", "client_id"=>"1"}
+  [1m[36mClient Load (1.2ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "Cel"], ["data", "34234234"], ["client_id", 1], ["created_at", "2016-02-04 22:33:55.355579"], ["updated_at", "2016-02-04 22:33:55.355579"]]
+  [1m[35m (152.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/clients/1/contacts/12
+Completed 302 Found in 179ms (ActiveRecord: 155.4ms)
+
+
+Started GET "/clients/1/contacts/12" for 127.0.0.1 at 2016-02-04 19:33:55 -0300
+Processing by ContactsController#show as HTML
+  Parameters: {"client_id"=>"1", "id"=>"12"}
+  [1m[36mContact Load (0.4ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mClient Load (0.3ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contacts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 326ms (Views: 320.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:33:57 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (2.3ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.4ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mContact Load (0.4ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (11.7ms)
+  Rendered clients/show.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 302ms (Views: 280.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/clients/1/contacts/new" for 127.0.0.1 at 2016-02-04 19:34:00 -0300
+Processing by ContactsController#new as HTML
+  Parameters: {"client_id"=>"1"}
+  [1m[35mClient Load (0.5ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contacts/_form.html.erb (7.8ms)
+  Rendered contacts/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 352ms (Views: 344.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:34:02 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.4ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mContact Load (0.4ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (8.9ms)
+  Rendered clients/show.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 325ms (Views: 308.7ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/clients/1/contacts/12" for 127.0.0.1 at 2016-02-04 19:34:32 -0300
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nGFkT8dIQ0KV9VeZfkmv5aDv+0A80kuzDAL64DLc8huPidHFio+wWEzVRDDlt2dEsGRbTfuLiyDth/axZghE0Q==", "client_id"=>"1", "id"=>"12"}
+  [1m[35mContact Load (0.5ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "contacts" WHERE "contacts"."id" = ?[0m  [["id", 12]]
+  [1m[35m (131.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 153ms (ActiveRecord: 133.3ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:34:32 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBill Load (0.6ms)[0m  SELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?  [["client_id", 1]]
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mContact Load (0.4ms)[0m  [1mSELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (14.8ms)
+  Rendered clients/show.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 421ms (Views: 403.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/clients/1/bills" for 127.0.0.1 at 2016-02-04 19:35:00 -0300
+Processing by BillsController#index as HTML
+  Parameters: {"client_id"=>"1"}
+  [1m[35mClient Load (0.4ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBill Load (0.4ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?[0m  [["client_id", 1]]
+  Rendered bills/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 298ms (Views: 291.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2016-02-04 19:35:04 -0300
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mClient Load (0.6ms)[0m  SELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBill Load (0.6ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."client_id" = ?[0m  [["client_id", 1]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mContact Load (0.4ms)[0m  SELECT "contacts".* FROM "contacts" WHERE "contacts"."client_id" = ?  [["client_id", 1]]
+  Rendered contacts/_index.html.erb (10.5ms)
+  Rendered clients/show.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 334ms (Views: 316.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2016-02-04 19:35:08 -0300
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (0.8ms)[0m  [1mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 315ms (Views: 312.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2016-02-04 19:35:12 -0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 277ms (Views: 275.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (130.5ms)[0m  [1mCREATE TABLE "bills" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "amount" float, "description" text, "date" date, "person_id" integer, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (133.6ms)[0m  [1mCREATE  INDEX "index_bills_on_client_id" ON "bills" ("client_id")[0m
+  [1m[35m (0.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bills_on_client_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bills_on_client_id' AND type='index'
+
+  [1m[36m (141.2ms)[0m  [1mCREATE  INDEX "index_bills_on_person_id" ON "bills" ("person_id")[0m
+  [1m[35m (140.8ms)[0m  CREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "surname" varchar, "dni" integer, "gender" varchar, "birthdate" date, "cuit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (141.3ms)[0m  [1mCREATE TABLE "contacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "kind" varchar, "data" text, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (141.4ms)[0m  CREATE  INDEX "index_contacts_on_client_id" ON "contacts" ("client_id")
+  [1m[36m (155.4ms)[0m  [1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "cuit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (142.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (143.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (154.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151215185059')[0m
+  [1m[35m (133.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151215184448')
+  [1m[36m (133.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151215185011')[0m
+  [1m[35m (133.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151215184823')
+  [1m[36m (139.3ms)[0m  [1mCREATE TABLE "bills" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "amount" float, "description" text, "date" date, "person_id" integer, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (141.6ms)[0m  [1mCREATE  INDEX "index_bills_on_client_id" ON "bills" ("client_id")[0m
+  [1m[35m (0.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bills_on_client_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bills_on_client_id' AND type='index'
+
+  [1m[36m (130.5ms)[0m  [1mCREATE  INDEX "index_bills_on_person_id" ON "bills" ("person_id")[0m
+  [1m[35m (140.7ms)[0m  CREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "surname" varchar, "dni" integer, "gender" varchar, "birthdate" date, "cuit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (131.7ms)[0m  [1mCREATE TABLE "contacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "kind" varchar, "data" text, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (144.6ms)[0m  CREATE  INDEX "index_contacts_on_client_id" ON "contacts" ("client_id")
+  [1m[36m (142.8ms)[0m  [1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "cuit" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (154.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (143.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.6ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (132.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151215185059')[0m
+  [1m[35m (145.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151215184448')
+  [1m[36m (144.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151215185011')[0m
+  [1m[35m (144.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151215184823')
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mClient Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE "clients"."dni" = 19354678 LIMIT 1[0m
+  [1m[35mClient Exists (0.4ms)[0m  SELECT  1 AS one FROM "clients" WHERE "clients"."cuit" = '20-19354678-9' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "clients" ("name", "surname", "birthdate", "dni", "cuit", "gender", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Joaquin"], ["surname", "Gonzalez"], ["birthdate", "1970-03-23"], ["dni", 19354678], ["cuit", "20-19354678-9"], ["gender", "M"], ["created_at", "2016-02-04 22:38:54.331891"], ["updated_at", "2016-02-04 22:38:54.331891"]]
+  [1m[35m (151.0ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mClient Exists (0.8ms)[0m  SELECT  1 AS one FROM "clients" WHERE "clients"."dni" = 25876543 LIMIT 1
+  [1m[36mClient Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE "clients"."cuit" = '24-25876543-7' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "clients" ("name", "surname", "birthdate", "dni", "cuit", "gender", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Maria"], ["surname", "Perez"], ["birthdate", "1983-06-16"], ["dni", 25876543], ["cuit", "24-25876543-7"], ["gender", "F"], ["created_at", "2016-02-04 22:38:54.500172"], ["updated_at", "2016-02-04 22:38:54.500172"]]
+  [1m[36m (140.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mClient Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE "clients"."dni" = 22345678 LIMIT 1[0m
+  [1m[35mClient Exists (0.4ms)[0m  SELECT  1 AS one FROM "clients" WHERE "clients"."cuit" = '23-22345678-4' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "clients" ("name", "surname", "birthdate", "dni", "cuit", "gender", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sergio"], ["surname", "Gutierrez"], ["birthdate", "1974-10-30"], ["dni", 22345678], ["cuit", "23-22345678-4"], ["gender", "M"], ["created_at", "2016-02-04 22:38:54.656064"], ["updated_at", "2016-02-04 22:38:54.656064"]]
+  [1m[35m (129.2ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mClient Exists (0.7ms)[0m  SELECT  1 AS one FROM "clients" WHERE "clients"."dni" = 30876321 LIMIT 1
+  [1m[36mClient Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE "clients"."cuit" = '20-30876321-0' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "clients" ("name", "surname", "birthdate", "dni", "cuit", "gender", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Mario"], ["surname", "Martinez"], ["birthdate", "1986-08-09"], ["dni", 30876321], ["cuit", "20-30876321-0"], ["gender", "M"], ["created_at", "2016-02-04 22:38:54.804447"], ["updated_at", "2016-02-04 22:38:54.804447"]]
+  [1m[36m (149.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mClient Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "clients" WHERE "clients"."dni" = 24778943 LIMIT 1[0m
+  [1m[35mClient Exists (0.4ms)[0m  SELECT  1 AS one FROM "clients" WHERE "clients"."cuit" = '27-24778943-8' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "clients" ("name", "surname", "birthdate", "dni", "cuit", "gender", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Juliana"], ["surname", "Lopez"], ["birthdate", "1979-04-24"], ["dni", 24778943], ["cuit", "27-24778943-8"], ["gender", "F"], ["created_at", "2016-02-04 22:38:54.968514"], ["updated_at", "2016-02-04 22:38:54.968514"]]
+  [1m[35m (141.5ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.5ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."cuit" = '24-16270743-9' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "people" ("name", "cuit", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Eduardo Casas"], ["cuit", "24-16270743-9"], ["created_at", "2016-02-04 22:38:55.146243"], ["updated_at", "2016-02-04 22:38:55.146243"]]
+  [1m[35m (145.0ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.9ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."cuit" = '30-17463843-2' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "people" ("name", "cuit", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "La Serenisima"], ["cuit", "30-17463843-2"], ["created_at", "2016-02-04 22:38:55.303145"], ["updated_at", "2016-02-04 22:38:55.303145"]]
+  [1m[35m (133.4ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.5ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."cuit" = '33-21734548-7' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "people" ("name", "cuit", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nestle"], ["cuit", "33-21734548-7"], ["created_at", "2016-02-04 22:38:55.447065"], ["updated_at", "2016-02-04 22:38:55.447065"]]
+  [1m[35m (124.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.5ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."cuit" = '20-16543769-5' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "people" ("name", "cuit", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Armando Barreda"], ["cuit", "20-16543769-5"], ["created_at", "2016-02-04 22:38:55.580747"], ["updated_at", "2016-02-04 22:38:55.580747"]]
+  [1m[35m (146.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mPerson Exists (0.5ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."cuit" = '23-25243746-1' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "people" ("name", "cuit", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Agustina Suarez"], ["cuit", "23-25243746-1"], ["created_at", "2016-02-04 22:38:55.737372"], ["updated_at", "2016-02-04 22:38:55.737372"]]
+  [1m[35m (146.6ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["kind", "E-Mail"], ["data", "jgonzalez@gmail.com"], ["client_id", 1], ["created_at", "2016-02-04 22:38:55.947860"], ["updated_at", "2016-02-04 22:38:55.947860"]]
+  [1m[36m (147.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "Teléfono"], ["data", "02214294753"], ["client_id", 5], ["created_at", "2016-02-04 22:38:56.104979"], ["updated_at", "2016-02-04 22:38:56.104979"]]
+  [1m[35m (146.8ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["kind", "Teléfono celular"], ["data", "155168184"], ["client_id", 3], ["created_at", "2016-02-04 22:38:56.261398"], ["updated_at", "2016-02-04 22:38:56.261398"]]
+  [1m[36m (134.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "contacts" ("kind", "data", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["kind", "Skype"], ["data", "joacogonzalez"], ["client_id", 1], ["created_at", "2016-02-04 22:38:56.406567"], ["updated_at", "2016-02-04 22:38:56.406567"]]
+  [1m[35m (124.8ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "bills" ("amount", "description", "date", "person_id", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["amount", 3000.0], ["description", "Materiales para construccion"], ["date", "2014-06-24"], ["person_id", 1], ["client_id", 1], ["created_at", "2016-02-04 22:38:56.587472"], ["updated_at", "2016-02-04 22:38:56.587472"]]
+  [1m[36m (143.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "bills" ("amount", "description", "date", "person_id", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["amount", 1202.45], ["description", "Insumos para aulas"], ["date", "2014-08-30"], ["person_id", 4], ["client_id", 1], ["created_at", "2016-02-04 22:38:56.742302"], ["updated_at", "2016-02-04 22:38:56.742302"]]
+  [1m[35m (145.7ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "bills" ("amount", "description", "date", "person_id", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["amount", 2400.0], ["description", "Cajas de carton"], ["date", "2015-05-19"], ["person_id", 3], ["client_id", 3], ["created_at", "2016-02-04 22:38:56.898830"], ["updated_at", "2016-02-04 22:38:56.898830"]]
+  [1m[36m (135.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "bills" ("amount", "description", "date", "person_id", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["amount", 3000.0], ["description", "Frascos de vidrio"], ["date", "2015-06-21"], ["person_id", 3], ["client_id", 2], ["created_at", "2016-02-04 22:38:57.044259"], ["updated_at", "2016-02-04 22:38:57.044259"]]
+  [1m[35m (147.1ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "bills" ("amount", "description", "date", "person_id", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["amount", 30000.0], ["description", "Container con juguetes y adornos de Navidad"], ["date", "2015-12-14"], ["person_id", 5], ["client_id", 5], ["created_at", "2016-02-04 22:38:57.203595"], ["updated_at", "2016-02-04 22:38:57.203595"]]
+  [1m[36m (133.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-04 19:39:17 -0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 325ms (Views: 323.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2016-02-04 19:39:21 -0300
+Processing by ClientsController#index as HTML
+  [1m[35mClient Load (1.3ms)[0m  SELECT "clients".* FROM "clients"
+  Rendered clients/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 287ms (Views: 283.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-04 19:39:40 -0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 352ms (Views: 348.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2016-02-04 19:39:43 -0300
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (0.9ms)[0m  [1mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 283ms (Views: 279.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-04 19:40:42 -0300
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.2ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (115.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (96.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.9ms)
+  Rendered /home/ramiro/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (215.5ms)

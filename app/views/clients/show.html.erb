@@ -2,7 +2,6 @@
 
 <h1>Datos del cliente</h1>
 
-<%= link_to 'Ver Contactos', client_contacts_path(@client) %> |
 <%= link_to 'Ver Facturas', client_bills_path(@client) %>
 <br>
 
@@ -40,6 +39,8 @@
   <strong>CUIL/CUIT:</strong>
   <%= @client.cuit %>
 </p>
+
+<%= render 'contacts/index' %>
 
 <h2>Facturación por año:</h2>
 
